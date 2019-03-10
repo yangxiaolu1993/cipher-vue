@@ -1,0 +1,191 @@
+.friend-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: url("http://img.xuanyiai.com/mini_info_bg.jpg") no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+  .friend-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 25px 0 25px;
+    font-size: 14px;
+    color: #ffffff;
+    img {
+      width: 16px;
+      height: 17px;
+      vertical-align: top;
+    }
+  }
+  /* 填写信息 */
+  .add {
+    margin: 16px auto 0;
+    padding: 26px 0 20px;
+    width: 325px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  /* 头像 */
+  .avater {
+    .avaterImg {
+      position: relative;
+      margin: 0 auto 20px;
+      width: 63px;
+      height: 63px;
+      img {
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background: #fff;
+        &.icon {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 16px;
+          height: 14px;
+          border-radius: 0%;
+        }
+      }
+    }
+  }
+  /* 填写信息通用 */
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin: 0 28px;
+    border-bottom: 1px solid #dfdfdf;
+    .info-icon {
+      width: 35px;
+      height: 18px;
+      img {
+        width: 17px;
+        height: 16px;
+      }
+    }
+    .info-main {
+      width: 100%;
+    }
+    &.nick {
+      padding: 8px 0;
+    }
+  }
+  .info-font {
+    font-size: 14px;
+    color: #999;
+  }
+  .info-arrow {
+    img {
+      width: 7px;
+      height: 13px;
+      vertical-align: middle;
+    }
+  }
+  /* 昵称 */
+  .nick-content {
+    input {
+      width: 100%;
+      height: 30px;
+    }
+  }
+  /* 性别 */
+  .sex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sex-value {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+  .sex-options {
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+  /* 选择生日 */
+  .birth-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+  }
+  .info-icon {
+    &.place-icon {
+      img {
+        width: 13px;
+        height: 18px;
+      }
+    }
+  }
+  /* 查看报告 */
+  .viewreport {
+    margin: 40px auto 0;
+    width: 244px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #6b90ff;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  /* 生日 */
+  .mint-datetime {
+    .picker-toolbar {
+      background: #e9e9e9;
+    }
+  }
+  .mint-datetime-action {
+    width: 80px;
+    color: #2f80f2;
+    font-size: 14px;
+  }
+  .mint-datetime-confirm {
+    color: #46bd45;
+  }
+  .picker-items {
+    padding: 20px 0;
+  }
+  .picker-slot {
+    font-size: 14px;
+  }
+  /* 出生地点 */
+  .place-box {
+    height: auto;
+    line-height: 30px;
+    padding: 11px 0;
+  }
+  /* 地区 */
+  .mint-popup-bottom {
+    width: 100%;
+    height: 280px;
+  }
+  .location-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    font-size: 14px;
+    background: #e9e9e9;
+    border-bottom: solid 1px #eaeaea;
+    p {
+      width: 80px;
+      text-align: center;
+      color: #2f80f2;
+      &.confirm {
+        color: #46bd45;
+      }
+    }
+  }
+  /* 选择图片 */
+  .chooseImg {
+    position: absolute;
+    top: -999px;
+  }
+  

@@ -1,0 +1,113 @@
+/* 支付-浮框 */
+.fortune-pay-float {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  background: $write;
+}
+.fortune-pay-float-desc {
+  padding: 27px 10px 0;
+  color: #6b90ff;
+  text-align: center;
+  .fortune-pay-float-desc-item {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+.fortune-pay-float-desc-people {
+  @include flex-center;
+  padding: 20px 0px 15px;
+  border-bottom: 1px solid rgba(171,171,171,0.4);
+  div {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .fortune-pay-float-desc-name {
+    max-width: 135px;
+    margin-right: 15px;
+    font-weight: normal;
+  }
+  img {
+    width: 21px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+.fortune-pay-float-desc-name {
+  font-weight: bold;
+}
+.fortune-pay-float-desc-code {
+  width: 127px;
+  text-align: center;
+}
+.fortune-pay-float-desc-tip {
+  padding: 11px 4px 0;
+  text-align: left;
+  div {
+    font-size: 12px;
+    line-height: 20px;
+    color: #a9a9a9;
+  }
+}
+.fortune-pay-money {
+  @include flex-center;
+  margin-top: 12px;
+  height: 45px;
+  width: 100%;
+  background: linear-gradient(147deg, #82c2fe 0%, #6779ff 100%);
+  .fortune-pay-money-item {
+    width: 187px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    &.pay-money {
+      @include flex-center;
+      height: 18px;
+    }
+  }
+  .pay-money {
+    div {
+      &:first-child {
+        max-width: 45px;
+        font-size: 12px;
+        margin-right: 3px;
+        line-height: 15px;
+        border: 1px solid $write;
+        border-radius: 4px;
+        a {
+          width: 45px;
+          display: inline-block;
+          transform: scale(0.8);
+        }
+      }
+      &:nth-child(2) {
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: bold;
+      }
+      &:nth-child(3) {
+        font-size: 13px;
+        line-height: 13px;
+        color: #bccfff;
+        margin-left: 4px;
+      }
+    }
+  }
+  .fortune-pay-line{
+    height: 29px;
+    border-left: 1px solid $write
+  }
+}
+/* 遮罩 */
+.toPayMask {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  background: #313131;
+  z-index: 9;
+}

@@ -1,0 +1,30 @@
+.slider{
+    width: 100%;
+    height:86px;
+    position: relative;
+     user-select: none;
+    .content{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #ffffff;
+        z-index: 100;
+        //    设置过渡动画
+        transition: 0.3s;
+         
+    }
+    .remove{
+        position: absolute;
+        width:70px;
+        height:86px;
+        background:#638AFF;
+        right: 0;
+        top: 0;
+        color:#fff;
+        text-align: center;
+        font-size: 14px;
+        line-height: 86px;
+    }
+}

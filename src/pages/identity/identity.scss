@@ -1,0 +1,423 @@
+.id-page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    margin:0 auto 0;
+    background: #3E4BAD
+    
+}
+.id-main{
+    width:351px;
+    height:583px;
+    padding:9px 8px;
+    margin: 0 auto;.id-page {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 100%;
+        margin: 0 auto 0;
+        background: #3e4bad;
+      }
+      .id-main {
+        width: 351px;
+        height: 583px;
+        padding: 9px 8px;
+        margin: 0 auto;
+        background: #4f84f6;
+      }
+      .contain {
+        width: 335px;
+        height: 565px;
+        display: flex;
+        flex-direction: column;
+        background: url('http://img.xuanyiai.com/mini_card_bg.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      /* 页面标题 */
+      .contain-title {
+        margin: 50px auto 0;
+        width: 253px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff;
+        background: url('http://img.xuanyiai.com/mini_card_title.png') no-repeat;
+        background-size: contain;
+        font-weight: bold;
+      }
+      /* 姓名 */
+      .contain-name {
+        display: flex;
+        justify-content: center;
+        margin: 37px auto 13px;
+        font-size: 16px;
+        color: #ffffff;
+        p {
+          &:last-child {
+            margin-left: 5px;
+            color: #f3b090;
+          }
+        }
+      }
+      /* 生命密码 */
+      .code {
+        position: relative;
+        width: 100%;
+        height: 282px;
+        padding-left: 2px;
+        background: url('../../assets/img/my_card_triangle_bg.png') no-repeat;
+        background-size: 252px 239px;
+        background-position: center center;
+      }
+      .white {
+        color: #fff;
+      }
+      .orange {
+        color: #f3b090;
+      }
+      .blue {
+        color: #403aaf;
+      }
+      .font-12 {
+        font-size: 12px;
+        line-height: 12px;
+      }
+      .font-14 {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      .font-16 {
+        font-size: 16px;
+        line-height: 16px;
+      }
+      .font-24 {
+        font-size: 24px;
+        line-height: 24px;
+      }
+      /* 主码 */
+      .code-master {
+        width: 100%;
+        text-align: center;
+      }
+      .code-master-num {
+        margin-top: 13px;
+      }
+      .code-master-name {
+        margin-top: 4px;
+      }
+      /* 左-上 联合码 */
+      .code-left-top {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        top: 53px;
+        left: 0;
+        width: 91px;
+      }
+      .code-left-top-num,
+      .code-left-top-name {
+        width: 45px;
+        text-align: center;
+      }
+      .code-left-top-desc {
+        margin-top: 13px;
+        padding-right: 8px;
+      }
+      /* 右-上 联合码 */
+      .code-right-top {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        top: 53px;
+        right: 0;
+        width: 91px;
+      }
+      .code-right-top-num,
+      .code-right-top-name {
+        width: 51px;
+        text-align: center;
+      }
+      .code-right-top-desc {
+        margin-top: 13px;
+        padding-left: 8px;
+      }
+      /* 左-下 内心码 */
+      .code-left-bottom {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        top: 155px;
+        left: 0;
+        width: 120px;
+      }
+      .code-left-bottom-num,
+      .code-left-bottom-name {
+        width: 48px;
+        text-align: center;
+      }
+      .code-left-bottom-name {
+        transform: scale(0.8);
+      }
+      .code-left-bottom-desc {
+        margin-top: 15px;
+        padding-right: 8px;
+      }
+      /* 右-下 外心码 */
+      .code-right-bottom {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        top: 155px;
+        right: 0;
+        width: 120px;
+      }
+      .code-right-bottom-num,
+      .code-right-bottom-name {
+        width: 48px;
+        text-align: center;
+      }
+      .code-right-bottom-name {
+        transform: scale(0.8);
+      }
+      .code-right-bottom-desc {
+        margin-top: 15px;
+        padding-left: 8px;
+      }
+      /* 坐镇码 */
+      .code-bottom {
+        width: 100%;
+        text-align: center;
+        top: 229px;
+      }
+      .code-bottom-desc {
+        margin-top: 10px;
+      }
+      /* 头像 */
+      .avater {
+        width: 100%;
+        text-align: center;
+        top: 114px;
+        padding-right: 3px;
+        img {
+          width: 40px;
+          height: 40px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+      /* 邀请好友合拍 */
+      .invite {
+        margin: 38px auto 0;
+        width: 194px;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+        background: #5161de;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      
+    background:#4F84F6;
+}
+.contain{
+    width:335px;
+    height:565px;
+    display:flex;
+    flex-direction:column;
+    background:url('http://img.xuanyiai.com/mini_card_bg.png') no-repeat;
+    background-size:100% 100%;
+}
+
+/* 页面标题 */
+.contain-title{
+    margin: 50px auto 0;
+    width: 253px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    background:url('http://img.xuanyiai.com/mini_card_title.png') no-repeat;
+    background-size:contain;
+    font-weight: bold
+}
+/* 姓名 */
+.contain-name{
+    display: flex;
+    justify-content: center;
+    margin: 37px auto 13px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.contain-name p:last-child{
+    margin-left:5px;
+    color:#f3b090;
+}
+
+/* 生命密码 */
+.code{
+    position: relative;
+    width: 100%;
+    height: 282px;
+    padding-left: 2px;
+    background: url('../../assets/img/my_card_triangle_bg.png') no-repeat;
+    background-size:252px 239px;
+    background-position: center center; 
+}
+.white{
+    color: #fff;
+}
+.orange{
+    color: #F3B090;
+}
+.blue{
+    color: #403AAF;
+}
+.font-12{
+    font-size: 12px;
+    line-height: 12px
+}
+.font-14{
+    font-size: 14px;
+    line-height: 14px
+}
+.font-16{
+    font-size: 16px;
+    line-height: 16px
+}
+.font-24{
+    font-size: 24px;
+    line-height: 24px
+}
+/* 主码 */
+.code-master{
+    width: 100%;
+    text-align: center;
+}
+.code-master-num{
+    margin-top: 13px;
+}
+.code-master-name{
+    margin-top: 4px;
+}
+/* 左-上 联合码 */
+.code-left-top{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    top: 53px;
+    left: 0;
+    width: 91px;
+}
+.code-left-top-num,
+.code-left-top-name{
+    width: 45px;
+    text-align: center
+}
+.code-left-top-desc{
+    margin-top: 13px;
+    padding-right: 8px
+}
+/* 右-上 联合码 */
+.code-right-top{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 53px;
+    right: 0;
+    width: 91px;
+}
+.code-right-top-num,
+.code-right-top-name{
+    width: 51px;
+    text-align: center
+}
+.code-right-top-desc{
+    margin-top: 13px;
+    padding-left: 8px
+}
+
+/* 左-下 内心码 */
+.code-left-bottom{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    top: 155px;
+    left: 0;
+    width: 120px;
+}
+.code-left-bottom-num,
+.code-left-bottom-name{
+    width: 48px;
+    text-align: center
+}
+.code-left-bottom-name{
+    transform: scale(0.8);
+}
+
+.code-left-bottom-desc{
+    margin-top: 15px;
+    padding-right: 8px
+}
+
+/* 右-下 外心码 */
+.code-right-bottom{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 155px;
+    right: 0;
+    width: 120px;
+}
+.code-right-bottom-num,
+.code-right-bottom-name{
+    width: 48px;
+    text-align: center
+}
+.code-right-bottom-name{
+    transform: scale(0.8);
+}
+.code-right-bottom-desc{
+    margin-top: 15px;
+    padding-left: 8px
+}
+/* 坐镇码 */
+.code-bottom{   
+    width: 100%;
+    text-align: center;
+    top: 229px;
+}
+.code-bottom-desc{
+    margin-top: 10px;
+}
+/* 头像 */
+.avater{
+    width: 100%;
+    text-align: center;
+    top: 114px;
+    padding-right: 3px
+}
+.avater img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff
+}
+
+/* 邀请好友合拍 */
+.invite{
+    margin: 38px auto 0;
+    width: 194px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    background: #5161DE;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #FFFFFF;
+}

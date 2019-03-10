@@ -1,0 +1,56 @@
+html,body,#app{
+    height: 100%;
+}
+body,p{
+    margin: 0;
+    padding: 0;
+}
+div{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+div,a,span,p{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input{
+    border: 0;
+    outline:none;
+}
+.POSR{
+    position: relative;
+}
+.POSA{
+    position: absolute
+}
+.pos-r{
+    position: relative;
+}
+.pos-a{
+    position: absolute
+}
+.pos-f{
+    position: fixed
+}
+#app{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+a{
+    text-decoration: none
+}
+.float-r {
+    float:right;
+}
+.float-l {
+    float:left;
+}
+.fontWeight{
+    font-weight: bold
+}
+
+.hide{
+    display: none;
+}
+
+

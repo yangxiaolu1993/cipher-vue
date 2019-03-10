@@ -1,0 +1,134 @@
+.matchreport {
+  width: 100%;
+  min-height: 100%;
+  background: #049ce5 url('http://img.xuanyiai.com/mini_matching_report_bg.jpg') no-repeat;
+  background-size: 375px 1090px;
+  padding-top: 50px;
+}
+/* 水球 */
+.waterCircle {
+  position: relative;
+  padding: 0 70px;
+  height: 159px;
+  width: 100%;
+}
+/* 水球-水纹 */
+.wave-box {
+  position: absolute;
+  width: 258px;
+  height: 144px;
+  border-radius: 36px;
+  z-index: 99;
+  overflow: hidden;
+  top: 0;
+}
+.wave-circle {
+  position: absolute;
+  height: 144px;
+  width: 144px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wave-circle-l {
+  left: 0;
+  .wave-circle-h {
+    width: 129px;
+  }
+}
+.wave-circle-r {
+  right: 0;
+  .wave-circle-h {
+    width: 129px;
+    margin-left: 15px;
+  }
+  .wave-circle-image {
+    margin-left: 15px;
+  }
+}
+.wave-circle-box {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+}
+.wave-circle-image {
+  position: relative;
+  width: 130px;
+  height: 18px;
+  img {
+    position: absolute;
+    width: 129px;
+    height: 18px;
+    opacity: 0.3;
+    vertical-align: top;
+    &.wave-img-two {
+      opacity: 0.30;
+    }
+    &.wave-img-three {
+      opacity: 0.35;
+    }
+  }
+}
+.wave-circle-mask {
+  position: relative;
+  height: 0;
+}
+.wave-circle-h {
+  position: absolute;
+  height: 100%;
+  background: #fff;
+  opacity: 0.3;
+  &.wave-mask-two {
+    opacity: 0.3;
+  }
+  &.wave-mask-three {
+    opacity: 0.35;
+  }
+}
+/* 水球-文字 */
+.wave-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 159px;
+  width: 258px;
+  background: url('http://img.xuanyiai.com/mini_matching_people.png') no-repeat center center;
+  background-size: 257px 159px;
+  z-index: 100;
+  .circle-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    height: 123px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #ffffff;
+    &.people-one {
+      padding-left: 12px;
+    }
+    &.people-two {
+      padding-right: 12px;
+    }
+    img {
+      width: 54px;
+      height: 54px;
+      vertical-align: top;
+      border: 3px solid #fff;
+      border-radius: 50%;
+    }
+  }
+}
+.circle-item-name {
+  color: #313131;
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.circle-item-code {
+  font-size: 14px;
+  line-height: 14px;
+}

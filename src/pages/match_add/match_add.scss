@@ -1,0 +1,84 @@
+.match_add_page{
+    position: relative;
+    min-height: 100%;
+    background:url('http://img.xuanyiai.com/mini_relation_bg.png') no-repeat;
+    background-size:100% 100%;
+    
+}
+/* 匹配记录 */
+.history{
+    position: absolute;
+    top: 32px;
+    right: 25px;
+    @include flex-row-vertical;
+    font-size:$font-14;
+    color:$write;
+    img{
+        margin-right: 10px;
+        width: 24px;
+        height: 23px;
+    }
+}
+
+// 选择两人
+.add_match{
+    position: absolute;
+    top:117px;
+    @include flex-center-column;
+    width: 100%;
+    // 匹配标题
+    .add_match_title{
+        font-size: $font-17;
+        color: $write;
+    }
+    // 匹配选人
+    .add_match_main{
+        @include flex-row-center;
+        width:100%;
+        height: 240px;
+        margin-top: 26px;
+        .match_item{
+            @include flex-column-center;
+            width: 142px;
+            .match_item_un{
+                @include flex-center;
+                width: 60px;
+                height: 60px;
+                background: #fff;
+                border-radius: 50%;
+                img{
+                    width: 54px;
+                    height: 54px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    // 查看两人关系
+    .add_match_btn{
+        @include flex-center;
+        width: 230px;
+        height: 44px;
+        font-size: $font-16;
+        color: $write;
+        background-image: linear-gradient(147deg, #5B7DFF 0%, #A45EFB 100%);
+        border-radius: 4px;
+    }
+}
+// 邀请好友
+.invite{
+    position: fixed;
+    bottom: 0;
+    @include flex-center;
+    width: 100%;
+    height: 50px;
+    font-size: $font-16;
+    color: #265BC0;
+    background: #FFDD66;
+    font-weight: bold;
+    img{
+        width: 21px;
+        height: 20px;
+        margin-right: 12px;
+    }
+}

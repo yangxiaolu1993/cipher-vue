@@ -1,0 +1,115 @@
+.pi_page {
+  position: relative;
+}
+
+.pi_tab {
+  font-size: $font-14;
+  border-bottom: 1px solid #eee;
+}
+
+// 添加
+.list_main {
+  // height: 300px;
+  overflow: hidden;
+  background: #fff;
+
+  .list_contain {
+    margin-bottom: 0px;
+
+    .list_item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 86px;
+      padding: 0 16px;
+      border-bottom: 1px solid #DFDFDF;
+
+      .list_item_avater {
+        margin-right: 10px;
+
+        img {
+          width: 47px;
+          height: 47px;
+          vertical-align: top;
+          border-radius: 50%;
+          border: 1px solid #6B90FF;
+        }
+      }
+
+      .list_item_info {
+        width: 100%;
+
+        .list_item_name {
+          margin-bottom: 5px;
+          color: #313131;
+          font-size: $font-14;
+
+          img {
+            width: 13px;
+            height: 13px;
+            margin-left: 10px;
+          }
+        }
+
+        .list_item_desc {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: $font-12;
+          color: #648AFF;
+
+          .list_item_code {
+            display: flex;
+            align-items: center;
+
+            img {
+              margin: 0 4px;
+              width: 21px;
+              height: 15px;
+            }
+          }
+
+          .list_item_relation {
+            padding: 3px 5px;
+            font-size: $font-12;
+            line-height: $font-12;
+            color: $write;
+            background: #648AFF;
+            border-radius: 3px;
+          }
+        }
+
+        .match_item_info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .match_item_degree {
+            color: #333;
+            font-size: $font-12;
+
+            a {
+              margin-left: 3px;
+              color: #648AFF
+            }
+          }
+        }
+      }
+    }
+
+    .load-more {
+      height: 40px;
+      line-height: 40px;
+      // background: #efefef;
+      text-align: center;
+      font-size: 14px;
+      img{
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,328 @@
+.fortune-page {
+  padding-top: 13px;
+  padding-bottom: 65px;
+  width: 100%;
+  min-height: 100%;
+  background: url('../../assets/img/minifortune_bg.jpg') no-repeat;
+  background-size: cover;
+}
+.fortune-top {
+  margin: 0px auto 0;
+  padding: 4px 5px;
+  width: 345px;
+  height: 122.5px;
+  background: #ed86ff;
+  border-radius: 6px;
+}
+.fortune-top-box {
+  padding-top: 15px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  text-align: center;
+  .fortune-top-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+  }
+}
+.fortune-top-group {
+  p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+/* 影响财运关键词 */
+.fortune-keyword {
+  position: absolute;
+  top: 72.5px;
+  left: 50%;
+  width: 255px;
+  height: 165px;
+  margin-left: -127px;
+  text-align: center;
+  background: url('../../assets/img/minireport_back.png') no-repeat;
+  background-size: contain;
+}
+.fortune-name {
+  width: 200px;
+  margin: 25px auto 0;
+  font-size: 15px;
+  color: #a53b00;
+  font-weight: bold;
+}
+.fortune-text {
+  margin-top: 21px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #da8a68;
+}
+.fortune-keyword-group {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px 0;
+  .fortune-keyword-item {
+    width: 60px;
+    height: 60px;
+    background: url('../../assets/img/minireport_font.png') no-repeat;
+    background-size: contain;
+    p {
+      display: inline-block;
+      font-size: 48px;
+      line-height: 60px;
+      color: #7e471a;
+    }
+  }
+}
+/* 报告内容 */
+.fortune-container {
+  margin-top: 130px;
+  padding: 0 15px;
+}
+.fortune-code {
+  float: left;
+  width: 168px;
+  height: 116px;
+  color: #fff;
+  margin: 24px 0px 10px 0px;
+  .wrapper-desc {
+    font-size: 13px;
+    color: #aadaff;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+.fortune-desc {
+  font-size: 14px;
+  line-height: 25px;
+  color: #ffffff;
+  text-align: justify;
+  &.fuzzy {
+    color: transparent;
+    text-shadow: #fff 0 0 8px;
+  }
+}
+/* 三角形 */
+.wrapper {
+  position: relative;
+  width: 107px;
+  height: 91px;
+  margin-left: 22px;
+  background: url('../../assets/img/minireport_sj.png') no-repeat;
+  background-size: contain;
+  .code-floor {
+    position: absolute;
+    p {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      font-size: 12px;
+      line-height: 15px;
+      color: #dde1ff;
+      text-align: center;
+    }
+  }
+}
+/* 第一层 */
+.floor-first {
+  bottom: 6px;
+  .code-i {
+    margin-left: 16px;
+  }
+  .code-j {
+    margin-left: 4px;
+  }
+  .code-k {
+    margin-left: 8px;
+  }
+  .code-l {
+    margin-left: 3px;
+  }
+}
+/* 第二层 */
+.floor-second {
+  bottom: 33px;
+  .code-m {
+    margin-left: 32px;
+  }
+  .code-n {
+    margin-left: 15px;
+  }
+}
+/* 第三层 */
+.floor-third {
+  width: 128px;
+  bottom: 50px;
+  .left-code-group {
+    margin-left: -21px;
+    .code-s {
+      margin-right: 4px;
+    }
+    .code-x {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  }
+  .right-code-group {
+    .code-v {
+      margin-right: 4px;
+    }
+    .code-u {
+      margin-right: 4px;
+    }
+    .code-t {
+      margin-left: 4px;
+    }
+  }
+}
+.floor-third .left-code-group p,
+  .floor-third .right-code-group p {
+  width: auto;
+}
+/* 第四层 */
+.floor-fourth {
+  bottom: 59px;
+  .code-o {
+    margin-left: 46px;
+    font-size: 19px !important;
+    color: #99dbff !important;
+  }
+}
+/* 第五层 */
+.floor-fifth {
+  top: -14px;
+  .code-q {
+    margin-left: 33px;
+  }
+  .code-p {
+    margin-left: 12px;
+  }
+}
+/* 第六层 */
+.floor-sixth {
+  top: -21px;
+  .code-r {
+    margin-left: 46px;
+  }
+}
+/* 提示 */
+.fortune-tip {
+  margin: 20px 15px 0;
+  font-size: 12px;
+  color: #baa3ff;
+  line-height: 22px;
+}
+/* 关于生命密码 */
+.aboutCode {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #ffffff;
+  text-align: right;
+  img {
+    margin: 0 20px 0 8px;
+    width: 14px;
+    height: 13px;
+    vertical-align: middle;
+  }
+}
+/* 底部 */
+.fortune-bottom {
+  position: fixed;
+  bottom: 0;
+  background: #8c4df0;
+  width: 100%;
+  z-index: 100;
+}
+.fortune-pay,
+  .fortune-pay-ticket,
+  .fortune-pay-over,
+  .toPlay {
+  height: 45px;
+  border-top: 1px solid#f7f7f7;
+}
+/* 底部-支付-解码券+购买 */
+.fortune-pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fortune-pay-item {
+  text-align: center;
+  img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+  }
+  &:first-child {
+    img {
+      margin-right: 23px;
+    }
+  }
+  &:last-child {
+    p {
+      display: inline-block;
+      font-size: 18px;
+      color: #ff8a58;
+      font-weight: bold;
+      margin: 0 2px;
+    }
+  }
+}
+.fortune-pay-line {
+  height: 29px;
+  border-left: 1px solid #f7f7f7;
+}
+.fortune-pay-item:first-child,
+  .fortune-pay-item:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 186px;
+  font-size: 16px;
+  color: #ffffff;
+}
+/* 底部-支付-完成 */
+.fortune-pay-over {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fortune-pay-over-item:first-child,
+  .fortune-pay-over-item:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 286px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+.fortune-pay-over-item:first-child img,
+  .fortune-pay-over-item:last-child img {
+  margin-right: 23px;
+  height: 18px;
+  vertical-align: middle;
+}
+.fortune-pay-over-item {
+  &:first-child {
+    img {
+      width: 18px;
+    }
+  }
+  &:last-child {
+    img {
+      width: 16px;
+    }
+  }
+}
+/* 底部-我也要测 */
+.toPlay {
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}

@@ -1,0 +1,49 @@
+$font-12:12px;
+$font-13:13px;
+$font-14:14px;
+$font-15:15px;
+$font-16:16px;
+$font-17:17px;
+$font-18:18px;
+
+$write:#ffffff;
+$black:#000;
+
+@mixin flex {
+    display: flex
+}
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin  flex-row-vertical {
+    display: flex;
+    align-items: center
+}
+
+@mixin flex-row-center {
+    display: flex;
+    justify-content: center
+}
+
+
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  flex-column-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}

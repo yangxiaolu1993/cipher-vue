@@ -1,0 +1,27 @@
+.mint-navbar .mint-tab-item {
+  padding: 0;
+  @include flex-center;
+  height: 43px;
+}
+
+.mint-tab-container {
+  padding-top: 45px;
+}
+
+.mint-navbar .mint-tab-item.is-selected {
+  border-bottom: 1px solid #648AFF;
+  color: #648AFF
+}
+
+
+.mint-cell-swipe{
+  width: 100%;
+  height: 100%;
+}
+.mint-cell-title{
+  display: inherit
+}
+.mint-cell-wrapper,
+.mint-cell-value{
+  height: 100%;
+}
