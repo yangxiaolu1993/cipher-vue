@@ -54,7 +54,7 @@ export default {
   components: { VueCropper },
   mounted() {
     // 获取可视高度
-    this.height = document.documentElement.clientHeight - 40;
+    this.height = document.documentElement.clientHeight - 35;
     this.addImg(this.$route.params.file);
   },
   methods: {

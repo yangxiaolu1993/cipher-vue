@@ -35,6 +35,20 @@ export default {
                 }
             });
 
+        },
+        /**
+         * 跳转深度报告
+         * @param {*} id 
+         */
+        deepRouter(id){
+            let that =this 
+            console.log(id)
+            that.$router.push({
+                name:'lover',
+                params:{
+                    id:id
+                }
+            })
         }
     }
 };

@@ -22,7 +22,6 @@ export default {
             avaterUrl = to.params.avater
         }
         next(vm => {
-            console.log(to.params.avater)
             vm.avaterUrl = avaterUrl
         });
     },
@@ -61,7 +60,6 @@ export default {
             this.$refs.time.open();
         },
         timeConfirm(val){
-            console.log(val)
             this.timeValue = val
         },
 

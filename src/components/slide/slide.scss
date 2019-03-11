@@ -1,6 +1,6 @@
 .slider{
     width: 100%;
-    height:86px;
+    height:172px;
     position: relative;
      user-select: none;
     .content{
@@ -17,14 +17,14 @@
     }
     .remove{
         position: absolute;
-        width:70px;
-        height:86px;
+        width:140px;
+        height:172px;
         background:#638AFF;
         right: 0;
         top: 0;
         color:#fff;
         text-align: center;
-        font-size: 14px;
-        line-height: 86px;
+        font-size: $font-28;
+        line-height: 172px;
     }
 }

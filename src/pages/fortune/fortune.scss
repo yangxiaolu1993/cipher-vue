@@ -1,6 +1,6 @@
 .fortune-page {
-  padding-top: 13px;
-  padding-bottom: 65px;
+  padding-top: 26px;
+  padding-bottom: 130px;
   width: 100%;
   min-height: 100%;
   background: url('../../assets/img/minifortune_bg.jpg') no-repeat;
@@ -8,119 +8,119 @@
 }
 .fortune-top {
   margin: 0px auto 0;
-  padding: 4px 5px;
-  width: 345px;
-  height: 122.5px;
+  padding: 8px 10px;
+  width: 690px;
+  height: 245px;
   background: #ed86ff;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 .fortune-top-box {
-  padding-top: 15px;
+  padding-top: 30px;
   width: 100%;
   height: 100%;
   border: 1px solid #ffffff;
-  border-radius: 3px;
+  border-radius: 6px;
   text-align: center;
   .fortune-top-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 40px;
+    height: 80px;
   }
 }
 .fortune-top-group {
   p {
     color: #fff;
-    font-size: 15px;
+    font-size: $font-30;
     font-weight: bold;
   }
 }
 /* 影响财运关键词 */
 .fortune-keyword {
   position: absolute;
-  top: 72.5px;
+  top: 145px;
   left: 50%;
-  width: 255px;
-  height: 165px;
-  margin-left: -127px;
+  width: 510px;
+  height: 330px;
+  margin-left: -254px;
   text-align: center;
   background: url('../../assets/img/minireport_back.png') no-repeat;
   background-size: contain;
 }
 .fortune-name {
-  width: 200px;
-  margin: 25px auto 0;
-  font-size: 15px;
+  width: 400px;
+  margin: 50px auto 0;
+  font-size: $font-30;
   color: #a53b00;
   font-weight: bold;
 }
 .fortune-text {
-  margin-top: 21px;
-  font-size: 12px;
-  line-height: 12px;
+  margin-top: 42px;
+  font-size: $font-24;
+  line-height: $font-24;
   color: #da8a68;
 }
 .fortune-keyword-group {
   display: flex;
   justify-content: space-around;
-  padding: 10px 15px 0;
+  padding: 20px 30px 0;
   .fortune-keyword-item {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     background: url('../../assets/img/minireport_font.png') no-repeat;
     background-size: contain;
     p {
       display: inline-block;
-      font-size: 48px;
-      line-height: 60px;
+      font-size: 96px;
+      line-height: 120px;
       color: #7e471a;
     }
   }
 }
 /* 报告内容 */
 .fortune-container {
-  margin-top: 130px;
-  padding: 0 15px;
+  margin-top: 260px;
+  padding: 0 30px;
 }
 .fortune-code {
   float: left;
-  width: 168px;
-  height: 116px;
+  width: 336px;
+  height: 232px;
   color: #fff;
-  margin: 24px 0px 10px 0px;
+  margin: 48px 0px 20px 0px;
   .wrapper-desc {
-    font-size: 13px;
+    font-size: $font-26;
     color: #aadaff;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
   }
 }
 .fortune-desc {
-  font-size: 14px;
-  line-height: 25px;
+  font-size: $font-28;
+  line-height: 50px;
   color: #ffffff;
   text-align: justify;
   &.fuzzy {
     color: transparent;
-    text-shadow: #fff 0 0 8px;
+    text-shadow: #fff 0 0 16px;
   }
 }
 /* 三角形 */
 .wrapper {
   position: relative;
-  width: 107px;
-  height: 91px;
-  margin-left: 22px;
+  width: 214px;
+  height: 182px;
+  margin-left: 44px;
   background: url('../../assets/img/minireport_sj.png') no-repeat;
   background-size: contain;
   .code-floor {
     position: absolute;
     p {
       display: inline-block;
-      width: 15px;
-      height: 15px;
-      font-size: 12px;
-      line-height: 15px;
+      width: 30px;
+      height: 30px;
+      font-size: $font-24;
+      line-height: 30px;
       color: #dde1ff;
       text-align: center;
     }
@@ -128,53 +128,53 @@
 }
 /* 第一层 */
 .floor-first {
-  bottom: 6px;
+  bottom: 12px;
   .code-i {
-    margin-left: 16px;
+    margin-left: 32px;
   }
   .code-j {
-    margin-left: 4px;
-  }
-  .code-k {
     margin-left: 8px;
   }
+  .code-k {
+    margin-left: 16px;
+  }
   .code-l {
-    margin-left: 3px;
+    margin-left: 6px;
   }
 }
 /* 第二层 */
 .floor-second {
-  bottom: 33px;
+  bottom: 66px;
   .code-m {
-    margin-left: 32px;
+    margin-left: 64px;
   }
   .code-n {
-    margin-left: 15px;
+    margin-left: 30px;
   }
 }
 /* 第三层 */
 .floor-third {
-  width: 128px;
-  bottom: 50px;
+  width: 256px;
+  bottom: 100px;
   .left-code-group {
-    margin-left: -21px;
+    margin-left: -42px;
     .code-s {
-      margin-right: 4px;
+      margin-right: 8px;
     }
     .code-x {
-      margin-left: 4px;
-      margin-right: 4px;
+      margin-left: 8px;
+      margin-right: 8px;
     }
   }
   .right-code-group {
     .code-v {
-      margin-right: 4px;
+      margin-right: 8px;
     }
     .code-u {
-      margin-right: 4px;
+      margin-right: 8px;
     }
     .code-t {
-      margin-left: 4px;
+      margin-left: 8px;
     }
   }
 }
@@ -184,48 +184,48 @@
 }
 /* 第四层 */
 .floor-fourth {
-  bottom: 59px;
+  bottom: 118px;
   .code-o {
-    margin-left: 46px;
-    font-size: 19px !important;
+    margin-left: 92px;
+    font-size: 38px !important;
     color: #99dbff !important;
   }
 }
 /* 第五层 */
 .floor-fifth {
-  top: -14px;
+  top: -28px;
   .code-q {
-    margin-left: 33px;
+    margin-left: 66px;
   }
   .code-p {
-    margin-left: 12px;
+    margin-left: 24px;
   }
 }
 /* 第六层 */
 .floor-sixth {
-  top: -21px;
+  top: -42px;
   .code-r {
-    margin-left: 46px;
+    margin-left: 92px;
   }
 }
 /* 提示 */
 .fortune-tip {
-  margin: 20px 15px 0;
-  font-size: 12px;
+  margin: 40px 30px 0;
+  font-size: $font-24;
   color: #baa3ff;
-  line-height: 22px;
+  line-height: 44px;
 }
 /* 关于生命密码 */
 .aboutCode {
-  margin-top: 20px;
-  font-size: 15px;
-  line-height: 15px;
+  margin-top: 40px;
+  font-size: $font-30;
+  line-height: $font-30;
   color: #ffffff;
   text-align: right;
   img {
-    margin: 0 20px 0 8px;
-    width: 14px;
-    height: 13px;
+    margin: 0 40px 0 16px;
+    width: 28px;
+    height: 26px;
     vertical-align: middle;
   }
 }
@@ -241,7 +241,7 @@
   .fortune-pay-ticket,
   .fortune-pay-over,
   .toPlay {
-  height: 45px;
+  height: 90px;
   border-top: 1px solid#f7f7f7;
 }
 /* 底部-支付-解码券+购买 */
@@ -253,27 +253,27 @@
 .fortune-pay-item {
   text-align: center;
   img {
-    width: 18px;
-    height: 18px;
+    width: 36px;
+    height: 36px;
     vertical-align: middle;
   }
   &:first-child {
     img {
-      margin-right: 23px;
+      margin-right: 46px;
     }
   }
   &:last-child {
     p {
       display: inline-block;
-      font-size: 18px;
+      font-size: $font-36;
       color: #ff8a58;
       font-weight: bold;
-      margin: 0 2px;
+      margin: 0 4px;
     }
   }
 }
 .fortune-pay-line {
-  height: 29px;
+  height: 38px;
   border-left: 1px solid #f7f7f7;
 }
 .fortune-pay-item:first-child,
@@ -281,8 +281,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 186px;
-  font-size: 16px;
+  width: 372px;
+  font-size: $font-32;
   color: #ffffff;
 }
 /* 底部-支付-完成 */
@@ -296,33 +296,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 286px;
-  font-size: 16px;
+  width: 572px;
+  font-size: $font-32;
   color: #ffffff;
   text-align: center;
 }
 .fortune-pay-over-item:first-child img,
   .fortune-pay-over-item:last-child img {
-  margin-right: 23px;
-  height: 18px;
+  margin-right: 46px;
+  height: 36px;
   vertical-align: middle;
 }
 .fortune-pay-over-item {
   &:first-child {
     img {
-      width: 18px;
+      width: 36px;
     }
   }
   &:last-child {
     img {
-      width: 16px;
+      width: 32px;
     }
   }
 }
 /* 底部-我也要测 */
 .toPlay {
-  line-height: 45px;
+  line-height: 90px;
   text-align: center;
   color: #fff;
-  font-size: 16px;
+  font-size: $font-32;
 }

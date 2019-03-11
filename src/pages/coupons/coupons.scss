@@ -4,7 +4,7 @@
   }
   .coupons-invita {
     width: 100%;
-    height: 268px;
+    height: 536px;
     background: url('https://img.xuanyiai.com/mini_ticket_bg.png') no-repeat;
     background-size: contain;
   }
@@ -12,60 +12,60 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 113px;
+    padding-top: 226px;
     width: 100%;
-    height: 178px;
+    height: 356px;
     text-align: center;
   }
   .invita-desc {
     p {
-      font-size: 19px;
+      font-size: $font-38;
       color: #566cd3;
-      letter-spacing: 2px;
+      letter-spacing: 4px;
       font-weight: bold;
     }
   }
   .invita-num {
-    margin-top: 19px;
-    font-size: 13px;
+    margin-top: 38px;
+    font-size: $font-26;
     color: #566cd3;
     a {
-      font-size: 18px;
+      font-size: $font-36;
     }
   }
   .invita-btn {
-    margin-top: 8px;
-    width: 144px;
-    height: 30px;
+    margin-top: 16px;
+    width: 288px;
+    height: 60px;
     background: #fe895c;
-    font-size: 13px;
+    font-size: $font-26;
     color: #ffffff;
-    line-height: 30px;
+    line-height: 60px;
     text-align: center;
-    border-radius: 14px;
+    border-radius: 28px;
   }
   /* 优惠券详情 */
   .coupons-group {
-    margin-top: 17px;
+    margin-top: 34px;
   }
   .coupons-item {
     position: relative;
-    margin: 0 auto 10px;
-    width: 335px;
-    height: 110px;
+    margin: 0 auto 40px;
+    width: 670px;
+    height: 220px;
     background: #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   .coupons-item-title {
-    padding-top: 14px;
-    padding-left: 14px;
+    padding-top: 28px;
+    padding-left: 28px;
     p {
       &:first-child {
-        font-size: 14px;
+        font-size: $font-28;
       }
       &:last-child {
-        margin-top: 3px;
-        font-size: 12px;
+        margin-top: 6px;
+        font-size: $font-24;
         color: #9b9b9b;
       }
     }
@@ -133,57 +133,57 @@
   .coupons-item-line {
     position: relative;
     width: 100%;
-    height: 13px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 7px;
+    margin-top: 14px;
     overflow: hidden;
     .semicircle {
       position: absolute;
       top: 0;
-      width: 13px;
-      height: 13px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: #566cd3;
       &.line-left {
-        left: -6.5px;
+        left: -13px;
       }
       &.line-right {
-        right: -6.5px;
+        right: -13px;
       }
     }
     .line-middle {
-      width: 300px;
+      width: 600px;
     }
   }
   .coupons-item-use {
     display: flex;
     justify-content: space-between;
-    padding: 8px 14px 0;
+    padding: 16px 28px 0;
   }
   .coupons-item-num {
-    font-size: 14px;
+    font-size: $font-28;
   }
   .coupons-item-state {
-    width: 66px;
-    height: 20px;
-    line-height: 20px;
+    width: 132px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    border-radius: 5px;
-    font-size: 12px;
+    border-radius: 10px;
+    font-size: $font-24;
     color: #ffffff;
   }
   /* 规则 */
   .rules {
-    margin: 25px auto 0;
-    padding-bottom: 30px;
-    width: 327px;
+    margin: 50px auto 0;
+    padding-bottom: 60px;
+    width: 654px;
     p {
-      font-size: 12px;
+      font-size: $font-24;
       color: #ffffff;
       opacity: 0.5;
-      line-height: 19px;
+      line-height: 38px;
     }
   }
   

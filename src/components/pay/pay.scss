@@ -6,98 +6,98 @@
   background: $write;
 }
 .fortune-pay-float-desc {
-  padding: 27px 10px 0;
+  padding: 54px 20px 0;
   color: #6b90ff;
   text-align: center;
   .fortune-pay-float-desc-item {
-    font-size: 17px;
+    font-size: $font-34;
     font-weight: bold;
   }
 }
 .fortune-pay-float-desc-people {
   @include flex-center;
-  padding: 20px 0px 15px;
+  padding: 40px 0px 30px;
   border-bottom: 1px solid rgba(171,171,171,0.4);
   div {
-    font-size: 16px;
+    font-size: $font-32;
     display: flex;
     align-items: center;
   }
   .fortune-pay-float-desc-name {
-    max-width: 135px;
-    margin-right: 15px;
+    max-width: 270px;
+    margin-right: 30px;
     font-weight: normal;
   }
   img {
-    width: 21px;
-    height: 15px;
+    width: 42px;
+    height: 30px;
     vertical-align: middle;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 .fortune-pay-float-desc-name {
   font-weight: bold;
 }
 .fortune-pay-float-desc-code {
-  width: 127px;
+  width: 254px;
   text-align: center;
 }
 .fortune-pay-float-desc-tip {
-  padding: 11px 4px 0;
+  padding: 22px 8px 0;
   text-align: left;
   div {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: $font-24;
+    line-height: 40px;
     color: #a9a9a9;
   }
 }
 .fortune-pay-money {
   @include flex-center;
-  margin-top: 12px;
-  height: 45px;
+  margin-top: 24px;
+  height: 90px;
   width: 100%;
   background: linear-gradient(147deg, #82c2fe 0%, #6779ff 100%);
   .fortune-pay-money-item {
-    width: 187px;
+    width: 374px;
     text-align: center;
-    font-size: 18px;
+    font-size: $font-36;
     color: #fff;
     &.pay-money {
       @include flex-center;
-      height: 18px;
+      height: 36px;
     }
   }
   .pay-money {
     div {
       &:first-child {
-        max-width: 45px;
-        font-size: 12px;
-        margin-right: 3px;
-        line-height: 15px;
+        max-width: 90px;
+        font-size: $font-24;
+        margin-right: 6px;
+        line-height: 30px;
         border: 1px solid $write;
-        border-radius: 4px;
+        border-radius: 8px;
         a {
-          width: 45px;
+          width: 90px;
           display: inline-block;
           transform: scale(0.8);
         }
       }
       &:nth-child(2) {
-        font-size: 17px;
-        line-height: 17px;
+        font-size: $font-34;
+        line-height: $font-34;
         font-weight: bold;
       }
       &:nth-child(3) {
-        font-size: 13px;
-        line-height: 13px;
+        font-size: $font-26;
+        line-height: $font-26;
         color: #bccfff;
-        margin-left: 4px;
+        margin-left: 8px;
       }
     }
   }
   .fortune-pay-line{
-    height: 29px;
+    height: 58px;
     border-left: 1px solid $write
   }
 }

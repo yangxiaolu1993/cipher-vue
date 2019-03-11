@@ -13,51 +13,51 @@
 
 /* 主要内容 */
 .home-content {
-  margin: 13px auto 0;
-  width: 345px;
+  margin: 25px auto 0;
+  width: 690px;
 
   .basicPart {
     width: 100%;
     background: $write;
-    border-radius: 5px;
+    border-radius: 10px;
 
     .userInfo {
       .userInfoBasic {
-        padding-top: 21px;
-        padding-left: 15px;
+        padding-top: 42px;
+        padding-left: 30px;
         @include flex;
         .userAvater {
           img {
-            margin-right: 10px;
-            width: 48px;
-            height: 48px;
+            margin-right: 20px;
+            width: 96px;
+            height: 96px;
             vertical-align: top;
           }
         }
 
         .userName {
-          margin-top: 8px;
+          margin-top: 16px;
 
           .name {
-            margin-bottom: 5px;
-            font-size: $font-15;
+            margin-bottom: 10px;
+            font-size: $font-30;
             color: #313131;
 
             img {
-              margin-left: 19px;
-              width: 13px;
-              height: 13px;
+              margin-left: 38px;
+              width: 26px;
+              height: 26px;
             }
           }
 
           .desc {
             p {
               display: inline-block;
-              font-size: $font-12;
+              font-size: $font-24;
               color: #9b9b9b;
 
               &.descCode {
-                margin-right: 5px;
+                margin-right: 10px;
               }
 
               &.viewReport {
@@ -66,9 +66,9 @@
             }
 
             img {
-              margin-left: 4px;
-              width: 8px;
-              height: 8px;
+              margin-left: 8px;
+              width: 16px;
+              height: 16px;
               vertical-align: middle;
             }
           }
@@ -76,39 +76,39 @@
       }
 
       .userCenter {
-        top: 27px;
+        top: 54px;
         right: 0;
-        width: 64px;
-        height: 24px;
-        font-size: $font-12;
+        width: 128px;
+        height: 48px;
+        font-size: $font-24;
         color: $write;
         text-align: center;
-        line-height: 24px;
+        line-height: 48px;
         background: #648aff;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
       }
     }
 
     .baseLine {
-      margin: 20px 10px 17px;
+      margin: 40px 20px 34px;
       height: 1px;
       background: #e9e9e9;
     }
 
     /* 测关系、查密码、身份卡 */
     .baseMenu {
-      padding: 0 25px 15px;
+      padding: 0 50px 60px;
       display: flex;
       justify-content: space-between;
       .baseMenuItem {
-        font-size: $font-13;
+        font-size: $font-26;
         color: #1e334a;
         text-align: center;
 
         img {
-          width: 82px;
-          height: 81px;
+          width: 164px;
+          height: 162px;
           vertical-align: top;
         }
       }
@@ -117,31 +117,31 @@
 
   /* 匹配人员信息 */
   .match {
-    margin-top: 13px;
+    margin-top: 26px;
     background: $write;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
-    height: 64px;
+    height: 128px;
 
     .matchMain {
       @include flex-row-vertical;
-      height: 64px;
-      padding-left: 16px;
-      padding-right: 26px;
+      height: 128px;
+      padding-left: 32px;
+      padding-right: 52px;
       letter-spacing: 0px;
 
       .matchTitle {
-        margin-right: 20px;
+        margin-right: 40px;
         color: #6b90ff;
       }
 
       .matchAvater {
         img {
-          width: 32px;
-          height: 32px;
+          width: 64px;
+          height: 64px;
           border-radius: 50%;
           border: 1px solid #1e334a;
-          margin-right: 10px;
+          margin-right: 20px;
 
           &:last-child {
             margin-right: 0;
@@ -153,13 +153,13 @@
 
     .matchArrow {
       position: absolute;
-      right: 8px;
+      right: 16px;
       top: 50%;
-      margin-top: -7px;
+      margin-top: -14px;
 
       img {
-        width: 8px;
-        height: 14px;
+        width: 16px;
+        height: 28px;
         vertical-align: top;
       }
     }
@@ -168,11 +168,11 @@
 
   /* 财运指南 */
   .fortune {
-    margin-top: 20px;
+    margin-top: 40px;
 
     .fortuneTitle {
-      margin-bottom: 20px;
-      font-size: $font-15;
+      margin-bottom: 40px;
+      font-size: $font-30;
       color: #8067ef;
     }
 
@@ -181,27 +181,27 @@
       flex-wrap: wrap;
 
       .fortuneItem {
-        width: 109px;
-        margin-right: 6px;
+        width: 218px;
+        margin-right: 12px;
         text-align: center;
 
         .fortuneItemIcon {
           img {
-            width: 20px;
-            height: 23px;
+            width: 40px;
+            height: 46px;
             vertical-align: top;
           }
         }
 
         .fortuneItemMain {
-          width: 109px;
-          height: 72px;
+          width: 218px;
+          height: 144px;
           text-align: center;
-          line-height: 72px;
+          line-height: 144px;
           background: url('https://img.xuanyiai.com/mini_fortune_blue_small.png') no-repeat;
           background-size: contain;
           color: $write;
-          font-size: $font-16;
+          font-size: $font-32;
         }
       }
     }
@@ -209,54 +209,54 @@
 
   /* 深度报告 */
   .depth {
-    margin-top: 20px;
+    margin-top: 40px;
 
     .depthTitle {
       display: flex;
       justify-content: space-between;
-      font-size: $font-15;
+      font-size: $font-30;
       color: #313131;
 
       .depthTitleLeft {
         img {
-          width: 21px;
-          height: 21px;
+          width: 42px;
+          height: 42px;
           vertical-align: top;
-          margin-right: 10px;
+          margin-right: 20px;
         }
       }
 
       .depthTitleRight {
-        font-size: $font-14;
+        font-size: $font-28;
 
         img {
-          width: 7px;
-          height: 13px;
+          width: 14px;
+          height: 26px;
           vertical-align: top;
-          margin-left: 10px;
+          margin-left: 20px;
         }
       }
     }
 
     .depthMain {
-      margin-top: 21px;
+      margin-top: 42px;
 
       .depthMainItem {
-        height: 79px;
+        height: 157px;
         background: $write;
         border: 1px solid #c8c8c8;
-        border-radius: 5px;
+        border-radius: 10px;
         @include flex-row-vertical;
-        margin-bottom: 14px;
-        padding: 0 14px;
+        margin-bottom: 28px;
+        padding: 0 28px;
 
         .depthItemIcon {
           img {
-            width: 60px;
-            height: 60px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             vertical-align: top;
-            margin-right: 14px;
+            margin-right: 28px;
           }
         }
 
@@ -265,7 +265,7 @@
 
           .depthItemTitle {
             position: relative;
-            font-size: $font-14;
+            font-size: $font-28;
             color: #4a4a4a;
             font-weight: bold;
 
@@ -273,14 +273,14 @@
               position: absolute;
               top: 50%;
               right: 0;
-              width: 7px;
-              height: 13px;
-              margin-top: -5px;
+              width: 14px;
+              height: 26px;
+              margin-top: -10px;
             }
           }
 
           .depthItemDesc {
-            margin-top: 7px;
+            margin-top: 14px;
             color: #999999;
           }
         }
@@ -291,14 +291,14 @@
   /* 关于生命密码 */
   .about {
     text-align: right;
-    font-size: $font-13;
+    font-size: $font-26;
     color: #4a4a4a;
 
     img {
-      width: 14px;
-      height: 13px;
+      width: 28px;
+      height: 26px;
       vertical-align: middle;
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 }

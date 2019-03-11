@@ -104,7 +104,7 @@
           </div>
         </div>
         <div class="depthMain">
-          <div class="depthMainItem" v-for="item in depth" :key="item.id">
+          <div class="depthMainItem" v-for="item in depth" :key="item.id" @click="deepRouter(item.id)">
             <div class="depthItemIcon">
               <img :src="item.report_small_img_url" alt>
             </div>

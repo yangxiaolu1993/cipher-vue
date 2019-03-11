@@ -3,7 +3,7 @@
 }
 
 .pi_tab {
-  font-size: $font-14;
+  font-size: $font-28;
   border-bottom: 1px solid #eee;
 }
 
@@ -20,16 +20,16 @@
       display: flex;
       align-items: center;
       width: 100%;
-      height: 86px;
-      padding: 0 16px;
+      height: 172px;
+      padding: 0 32px;
       border-bottom: 1px solid #DFDFDF;
 
       .list_item_avater {
-        margin-right: 10px;
+        margin-right: 20px;
 
         img {
-          width: 47px;
-          height: 47px;
+          width: 94px;
+          height: 94px;
           vertical-align: top;
           border-radius: 50%;
           border: 1px solid #6B90FF;
@@ -40,14 +40,14 @@
         width: 100%;
 
         .list_item_name {
-          margin-bottom: 5px;
+          margin-bottom: 10px;
           color: #313131;
-          font-size: $font-14;
+          font-size: $font-28;
 
           img {
-            width: 13px;
-            height: 13px;
-            margin-left: 10px;
+            width: 26px;
+            height: 26px;
+            margin-left: 20px;
           }
         }
 
@@ -55,7 +55,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          font-size: $font-12;
+          font-size: $font-24;
           color: #648AFF;
 
           .list_item_code {
@@ -63,19 +63,19 @@
             align-items: center;
 
             img {
-              margin: 0 4px;
-              width: 21px;
-              height: 15px;
+              margin: 0 8px;
+              width: 42px;
+              height: 30px;
             }
           }
 
           .list_item_relation {
-            padding: 3px 5px;
-            font-size: $font-12;
-            line-height: $font-12;
+            padding: 6px 10px;
+            font-size: $font-24;
+            line-height: $font-24;
             color: $write;
             background: #648AFF;
-            border-radius: 3px;
+            border-radius: 6px;
           }
         }
 
@@ -86,10 +86,10 @@
 
           .match_item_degree {
             color: #333;
-            font-size: $font-12;
+            font-size: $font-24;
 
             a {
-              margin-left: 3px;
+              margin-left: 6px;
               color: #648AFF
             }
           }
@@ -98,16 +98,16 @@
     }
 
     .load-more {
-      height: 40px;
-      line-height: 40px;
+      height: 80px;
+      line-height: 80px;
       // background: #efefef;
       text-align: center;
-      font-size: 14px;
+      font-size: $font-28;
       img{
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         vertical-align: middle;
-        margin-right: 10px;
+        margin-right: 40px;
       }
     }
   }

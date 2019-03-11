@@ -69,6 +69,12 @@ var router = new Router({
       meta:{auth:true}
     },
     {
+      path: '/lover',
+      name: 'lover',
+      component: resolve => require(['@/pages/deep_lover/deep_lover'],resolve),
+      meta:{auth:true}
+    },
+    {
       path: '/exam',
       name: 'exam',
       component: resolve => require(['@/pages/exam/exam'],resolve)

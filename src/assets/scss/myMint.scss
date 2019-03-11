@@ -1,11 +1,11 @@
 .mint-navbar .mint-tab-item {
   padding: 0;
   @include flex-center;
-  height: 43px;
+  height: 86px;
 }
 
 .mint-tab-container {
-  padding-top: 45px;
+  padding-top: 90px;
 }
 
 .mint-navbar .mint-tab-item.is-selected {
@@ -24,4 +24,8 @@
 .mint-cell-wrapper,
 .mint-cell-value{
   height: 100%;
+}
+
+.picker-slot{
+    font-size: $font-24;
 }
