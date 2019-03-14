@@ -8,6 +8,7 @@ import {
 export default {
   data() {
     return {
+      frompath: '', //从哪个模块进入
       selected: 'add',
       addList: [], //添加列表
       matchList: [], //匹配列表
@@ -59,16 +60,24 @@ export default {
       }
     }
   },
+  beforeRouteEnter(to, from, next) {
+    console.log(from)
+    let name = from.name
+    next(vm => {
+      vm.frompath = name
+    })
+  },
   mounted() {
     let that = this
     that.init()
-    if (that.$route.params.type == 1) {
+    if (that.$route.params.type == 1 || !that.$route.params.type) {
       that.selected = 'add'
       that.getPiFriend(1)
     } else {
       that.selected = 'match'
       that.getPiFriend(2)
     }
+    
   },
 
   methods: {
@@ -84,10 +93,6 @@ export default {
      */
     getPiFriend(type, index = 0, pageSize = 10) {
       let that = this
-      // Indicator.open({
-      //   text: 'Loading...',
-      //   spinnerType: 'fading-circle'
-      // });
       if (type == 1 && !that.addScroll.request || type == 2 && !that.matchScroll.request) {
         if (type == 1) {
           that.addScroll.request = true
@@ -103,7 +108,7 @@ export default {
           let data = res.data.list
           let total = res.data.total
           for (let item of data) {
-            item.avater = './static/img/num_' + item.master_code + '.png'
+            item.avater = '../static/img/num_' + item.master_code + '.png'
           }
           setTimeout(function () {
             if (type == 1) {
@@ -130,13 +135,51 @@ export default {
             // Indicator.close()
             that.addScroll.request = false
             that.matchScroll.request = false
-
-            console.log(that.matchList.length)
           }, 2000)
 
         })
       }
 
+    },
+    /**
+     * 选择派友进行跳转
+     * @param {*} id 
+     */
+    chooseFriend(item){
+      console.log(item)
+      let that = this
+      // 夫妻、恋人报告
+      if(that.frompath == 'lover_add'){
+        let params = {
+          info:item,
+          module:'friend'
+        }
+        Object.assign(params,that.$route.params)
+        that.$router.replace({
+          name:'lover_add',
+          params:params
+        })
+      }
+      //密码解读
+      if(that.frompath == 'friendInfo'){
+        let params = {
+          'id':item.id
+        }
+        that.$router.replace({
+          name:'codeReading',
+          params:params
+        })
+      }
+      //密码解读报告
+      if(that.frompath == 'codeReading'){
+        let params = {
+          'id':item.id
+        }
+        that.$router.replace({
+          name:'codeReading',
+          params:params
+        })
+      }
     },
     /**
      * 开始移动

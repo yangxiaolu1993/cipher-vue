@@ -1,6 +1,6 @@
 <!-- 财富指南-小报告 -->
 <template>
-  <div class="fortune-page">
+  <div class="fortune-page" v-title="{title:toName(query)}">
     <!-- 标题 -->
     <div class="fortune-top">
       <div class="fortune-top-box">

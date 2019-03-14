@@ -4,7 +4,7 @@
     <input type="file" class="chooseImg" ref="inputer" accept="image/*" @change="chooseImg()">
     <div class="friend-title">
       <div>请填写新π友的资料，或点击右侧选择π友</div>
-      <div>
+      <div @click="chooseFriend">
         <img src="../../assets/img/pi_friend_icon.png" alt>
       </div>
     </div>

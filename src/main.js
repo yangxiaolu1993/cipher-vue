@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import {
   Popup,
@@ -21,6 +20,7 @@ import Vuex from 'vuex'
 import VuexConfig from './config/vuex'
 import Global from './config/global'
 import 'amfe-flexible'
+import title from './config/directive'
 
 // 数据模拟
 require('./mock')

@@ -53,6 +53,7 @@ function drawText(ctx, str, initHeight) {
 export default {
     data() {
         return {
+            query:'',
             buyStatus: 1, //是否购买 0 购买 1 未购买
             toPay: 0, //去支付 0 否  1 去支付
             birthCode: {}, //三角形
@@ -87,7 +88,6 @@ export default {
         init() {
             let that = this;
             this.query = this.$route.query.id;
-            console.log("请求");
             this.$HTTP
                 .fortuneDetail({
                     report_id: that.$route.query.id,
@@ -254,6 +254,19 @@ export default {
             })
         },
 
-
+        // 返回报告的名称
+        toName(id){
+            let title = {
+                '20':'赚钱禁忌',
+                '21':'家庭旺财',
+                '22':'偏财运',
+                '23':'因何加薪',
+                '24':'跳槽风险',
+                '25':'提升财运',
+                '26':'赚钱窍门',
+                '27':'工作避坑',
+            }
+            return title[id]
+        }
     }
 };

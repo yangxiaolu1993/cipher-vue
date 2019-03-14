@@ -5,6 +5,22 @@
 class Global {
     constructor() {
         this.nickname = '设置全局变量和方法'
+        /**
+         * 浏览器标题
+         */
+        this.caption = {
+            'Home':'密码派',
+            'fortune':'财运指南',
+            'coupons':'优惠券',
+            'identity':'身份卡',
+            'friendInfo':'密码解读',
+            'crop':'裁剪',
+            'matchAdd':'关系匹配',
+            'matchReport':'关系匹配',
+            'piFriends':'我的π友',
+            'lover_add':'恋人相处指南',
+            'codeReading':'密码解读'
+        }
     }
     /**
      * 将canvas生成的图片裁剪生成图片

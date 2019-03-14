@@ -13,6 +13,8 @@ class HttpUrl{
         this.getcoupons = '/mock/coupons/get'
         // π友
         this.pifriend = '/mock/pi_friend'
+        // 密码解读
+        this.codeReading = '/mock/code_reading'
     }
 }
 

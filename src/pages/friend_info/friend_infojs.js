@@ -1,4 +1,9 @@
 import place from '../../components/place/place'
+import {
+    Indicator,
+    MessageBox,
+    Toast
+  } from 'mint-ui'
 export default {
     data () {
       return {
@@ -83,10 +88,21 @@ export default {
         chooseImg(e){
             this.$router.push({name:'crop',params:{file:this.$refs.inputer.files[0]}})
         },
+        //从派友选择
+        chooseFriend(){
+            this.$router.push({
+                name:'piFriends'
+            })
+        },
         // 查看报告
         viewreport(){
-            console.log(this.nickname)
-            console.log(this.sex)
+            if(this.birthValue == '' || this.nickname == ''){
+                Toast('请完善信息')
+            }else{
+                this.$router.push({
+                    name:'codeReading'
+                })
+            }
         }
     }
   }

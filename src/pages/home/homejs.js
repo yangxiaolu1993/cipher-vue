@@ -42,9 +42,8 @@ export default {
          */
         deepRouter(id){
             let that =this 
-            console.log(id)
             that.$router.push({
-                name:'lover',
+                name:'lover_add',
                 params:{
                     id:id
                 }
