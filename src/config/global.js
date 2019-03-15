@@ -15,8 +15,10 @@ class Global {
             'identity':'身份卡',
             'friendInfo':'密码解读',
             'crop':'裁剪',
-            'matchAdd':'关系匹配',
-            'matchReport':'关系匹配',
+            'match':'关系匹配',
+            'match_add':'关系匹配',
+            'match_report':'关系匹配',
+            'match_pi':'我的π友',
             'piFriends':'我的π友',
             'lover_add':'恋人相处指南',
             'codeReading':'密码解读'

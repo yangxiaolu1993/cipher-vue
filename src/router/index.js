@@ -61,21 +61,36 @@ var router = new Router({
       }
     },
     {
-      path: '/matchAdd',
-      name: 'matchAdd',
-      component: resolve => require(['@/pages/match_add/match_add'], resolve),
+      path: '/match',
+      name: 'match',
+      component: resolve => require(['@/pages/match/index/index'], resolve),
       meta: {
         auth: true
-      }
+      },
+      children:[{
+        path: 'add',
+        name: 'match_add',
+        component: resolve => require(['@/pages/match/add/add'], resolve),
+        meta: {
+          auth: true
+        }
+      },{
+        path: 'pi',
+        name: 'match_pi',
+        component: resolve => require(['@/pages/pi_friends/pi_friends'], resolve),
+        meta: {
+          auth: true
+        }
+      },{
+        path: 'report',
+        name: 'match_report',
+        component: resolve => require(['@/pages/match/report/report'], resolve),
+        meta: {
+          auth: true
+        }
+      }]
     },
-    {
-      path: '/matchReport',
-      name: 'matchReport',
-      component: resolve => require(['@/pages/match_report/match_report'], resolve),
-      meta: {
-        auth: true
-      }
-    },
+    
     {
       path: '/piFriends',
       name: 'piFriends',
