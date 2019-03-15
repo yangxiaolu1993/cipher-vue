@@ -1,0 +1,127 @@
+.match_add_page {
+  position: relative;
+  min-height: 100vh;
+  background: url('http://img.xuanyiai.com/mini_relation_bg.png') no-repeat;
+  background-size: 100% 100%;
+
+}
+
+/* 匹配记录 */
+.history {
+  position: absolute;
+  top: 64px;
+  right: 50px;
+  @include flex-row-vertical;
+  font-size: $font-28;
+  color: $write;
+
+  img {
+    margin-right: 20px;
+    width: 48px;
+    height: 46px;
+  }
+}
+
+// 选择两人
+.add_match {
+  position: absolute;
+  top: 234px;
+  @include flex-center-column;
+  width: 100%;
+
+  // 匹配标题
+  .add_match_title {
+    font-size: $font-34;
+    color: $write;
+  }
+
+  // 匹配选人
+  .add_match_main {
+    @include flex-row-center;
+    width: 100%;
+    height: 480px;
+    margin-top: 52px;
+
+    .match_item {
+      @include flex-column-center;
+      width: 284px;
+
+      .match_item_un {
+        @include flex-center;
+        width: 120px;
+        height: 120px;
+        background: #fff;
+        border-radius: 50%;
+
+        img {
+          width: 108px;
+          height: 108px;
+          border-radius: 50%;
+        }
+      }
+
+      .match_item_selected {
+        width: 100%;
+        text-align: center;
+        font-size: 28rpx;
+        color: #313131;
+
+        .selected_avater {
+          @include flex-center;
+          width: 120px;
+          height: 120px;
+          background: #fff;
+          border-radius: 50%;
+          margin: 0 auto 15px;
+
+          img {
+            width: 108px;
+            height: 108px;
+            border-radius: 50%;
+          }
+          
+        }
+        .selected_code{
+            margin: 10px auto 0;
+            width: 102px;
+            height: 50px;
+            line-height: 60px;
+            background: url('../../../assets/img/match_code_bg.png') no-repeat;
+            background-size: 102px 50px;
+            color: #fff;
+        }
+
+      }
+    }
+  }
+
+  // 查看两人关系
+  .add_match_btn {
+    @include flex-center;
+    width: 460px;
+    height: 88px;
+    font-size: $font-32;
+    color: $write;
+    background-image: linear-gradient(147deg, #5B7DFF 0%, #A45EFB 100%);
+    border-radius: 8px;
+  }
+}
+
+// 邀请好友
+.invite {
+  position: fixed;
+  bottom: 0;
+  @include flex-center;
+  width: 100%;
+  height: 100px;
+  font-size: $font-32;
+  color: #265BC0;
+  background: #FFDD66;
+  font-weight: bold;
+
+  img {
+    width: 42px;
+    height: 40px;
+    margin-right: 24px;
+  }
+}

@@ -43,7 +43,7 @@
               <p>查密码</p>
             </div>
           </router-link>
-          <router-link class="baseMenuItem" :to="{name:'matchAdd'}">
+          <router-link class="baseMenuItem" :to="{name:'match_add'}">
             <div class="baseMenuItem">
               <img src="@/assets/img/menu_relation_icon.png" alt>
               <p>测关系</p>

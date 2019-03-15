@@ -33,12 +33,12 @@
       <!-- 水球上的文字 -->
       <div class='wave-content' :style="{left:(clientWidth-258)/2+'px'}">
         <div class='circle-item people-one'>
-          <img src='../../assets/img/avater.png'>
+          <img src='../../../assets/img/avater.png'>
           <div class='circle-item-name'>杨小璐</div>
           <div class='circle-item-code'>5号人</div>
         </div>
         <div class='circle-item people-two'>
-          <img src='../../assets/img/avater.png'>
+          <img src='../../../assets/img/avater.png'>
           <div class='circle-item-name'>佟</div>
           <div class='circle-item-code'>5号人</div>
         </div>
@@ -48,9 +48,9 @@
 </template>
 
 <script>
-import matchReportJS from './match_reportjs.js'
+import matchReportJS from './reportjs.js'
 export default matchReportJS
 </script>
 <style lang='scss' scoped>
-@import 'match_report';
+@import 'report';
 </style>

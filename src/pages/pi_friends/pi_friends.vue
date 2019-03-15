@@ -20,7 +20,7 @@
             <slide v-for="item in addList" :key="item.id" :isplace='addPlace' @start="start(1)" @end="end(1)" @del="del(item.id)">
               <div class="list_item" @click="chooseFriend(item)">
                 <div class="list_item_avater">
-                  <img :src="item.avater" alt>
+                  <img :src="item.avatar" alt>
                 </div>
                 <div class="list_item_info">
                   <div class="list_item_name">
@@ -66,7 +66,7 @@
             <slide v-for="item in matchList" :key="item.id" :isplace='matchPlace' @start="start(2)" @end="end(2)" @del="del(item.id)">
               <div class="list_item" @click="chooseFriend(item)">
                 <div class="list_item_avater">
-                  <img :src="item.avater" alt>
+                  <img :src="item.avatar" alt>
                 </div>
                 <div class="list_item_info">
                   <div class="list_item_name match_item_info">

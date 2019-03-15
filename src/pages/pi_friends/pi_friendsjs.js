@@ -77,7 +77,7 @@ export default {
       that.selected = 'match'
       that.getPiFriend(2)
     }
-    
+
   },
 
   methods: {
@@ -108,7 +108,10 @@ export default {
           let data = res.data.list
           let total = res.data.total
           for (let item of data) {
-            item.avater = '../static/img/num_' + item.master_code + '.png'
+            if (!item.avatar) {
+              item.avatar = '../static/img/num_' + item.master_code + '.png'
+            }
+
           }
           setTimeout(function () {
             if (type == 1) {
@@ -145,39 +148,49 @@ export default {
      * 选择派友进行跳转
      * @param {*} id 
      */
-    chooseFriend(item){
+    chooseFriend(item) {
       console.log(item)
       let that = this
       // 夫妻、恋人报告
-      if(that.frompath == 'lover_add'){
+      if (that.frompath == 'lover_add') {
         let params = {
-          info:item,
-          module:'friend'
+          info: item,
+          module: 'friend'
         }
-        Object.assign(params,that.$route.params)
+        Object.assign(params, that.$route.params)
         that.$router.replace({
-          name:'lover_add',
-          params:params
+          name: 'lover_add',
+          params: params
         })
       }
       //密码解读
-      if(that.frompath == 'friendInfo'){
+      if (that.frompath == 'friendInfo') {
         let params = {
-          'id':item.id
+          'id': item.id
         }
         that.$router.replace({
-          name:'codeReading',
-          params:params
+          name: 'codeReading',
+          params: params
         })
       }
       //密码解读报告
-      if(that.frompath == 'codeReading'){
+      if (that.frompath == 'codeReading') {
         let params = {
-          'id':item.id
+          'id': item.id
         }
         that.$router.replace({
-          name:'codeReading',
-          params:params
+          name: 'codeReading',
+          params: params
+        })
+      }
+      // 关系匹配
+      if (that.frompath == 'match_add') {
+        let params = {
+          info: item,
+        }
+        that.$router.replace({
+          name: 'match_add',
+          params: params
         })
       }
     },
