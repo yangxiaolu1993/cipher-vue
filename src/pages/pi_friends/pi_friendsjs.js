@@ -185,10 +185,11 @@ export default {
       }
       // 关系匹配
       if (that.frompath == 'match_add') {
+        
         let params = {
           info: item,
         }
-        that.$router.replace({
+        that.$router.push({
           name: 'match_add',
           params: params
         })

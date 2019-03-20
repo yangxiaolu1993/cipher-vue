@@ -2,7 +2,8 @@
 <template>
   <div class="match">
     <keep-alive include="match_add">
-      <router-view></router-view>
+      <!-- <router-view></router-view> -->
+      <component :is="currentTabComponent"></component>
     </keep-alive>
   </div>
 </template>

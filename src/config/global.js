@@ -21,7 +21,8 @@ class Global {
             'match_pi':'我的π友',
             'piFriends':'我的π友',
             'lover_add':'恋人相处指南',
-            'codeReading':'密码解读'
+            'codeReading':'密码解读',
+            'pi':'我的π友'
         }
     }
     /**

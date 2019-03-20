@@ -24,7 +24,6 @@ export default {
   methods: {
     // 选择派友
     selectedPi(index) {
-      console.log(this.active)
       this.active = index
       this.$router.push({
         name: 'match_pi'
