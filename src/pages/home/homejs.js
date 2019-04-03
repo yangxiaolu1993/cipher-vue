@@ -19,22 +19,22 @@ export default {
     methods: {
         init() {
             // 轮播图
-            this.$HTTP.banner().then(res => {
-                let res1 = res.data;
-                if (res1.code == 200) {
-                    console.log(res.data);
-                    this.swiper = res1.data;
-                }
+            this.$HTTP.swiper().then(res => {
+                // console.log(res)
+                this.swiper = res.data;
             });
             // 小报告、大报告列表
-            this.$HTTP.reportList().then(res => {
-                let data = res.data;
-                if (data.code == 200) {
-                    this.fortune = data.data.goods_mini_report_info_set;
-                    this.depth = data.data.goods_report_info_set;
-                }
-            });
+            this.$HTTP.mini_report().then(res=>{
+                this.fortune = res.data;
+            })
+            this.$HTTP.deep_report().then(res=>{
+                this.depth = res.data;
+            })
 
+            this.$HTTP.mini_fortune().then(res=>{
+                console.log(res.data)
+                this.fortune = res.data;
+            })
         },
         /**
          * 跳转深度报告

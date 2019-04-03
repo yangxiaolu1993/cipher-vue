@@ -15,7 +15,11 @@ class InterServer {
         this.getcoupons = this.$POST(HttpUrl.getcoupons)
         this.pifriend = this.$POST(HttpUrl.pifriend)
         this.codeReading = this.$POST(HttpUrl.codeReading)
-        
+
+        this.swiper = this.$GET(HttpUrl.swiper)
+        this.mini_report = this.$GET(HttpUrl.mini_report)
+        this.deep_report = this.$GET(HttpUrl.deep_report)
+        this.mini_fortune = this.$GET(HttpUrl.mini_fortune)
     }
     $POST(url){
         

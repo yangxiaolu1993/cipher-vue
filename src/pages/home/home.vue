@@ -87,7 +87,11 @@
               <div class="fortuneItemIcon" v-if="index>2">
                 <img src="@/assets/img/fortune_icon.png" alt>
               </div>
-              <div class="fortuneItemMain">{{item.report_name}}</div>
+              <div class="fortuneItemMain" v-if="!item.keyword">{{item.report_name}}</div>
+              <div class="fortuneItemMain bought" v-if="item.keyword">
+                <div class="bought-title">{{item.connect_str}}</div>
+                <div class="bought-keyword">{{item.keyword}}</div>
+              </div>
             </div>
           </router-link>
         </div>
@@ -104,7 +108,12 @@
           </div>
         </div>
         <div class="depthMain">
-          <div class="depthMainItem" v-for="item in depth" :key="item.id" @click="deepRouter(item.id)">
+          <div
+            class="depthMainItem"
+            v-for="item in depth"
+            :key="item.id"
+            @click="deepRouter(item.id)"
+          >
             <div class="depthItemIcon">
               <img :src="item.report_small_img_url" alt>
             </div>

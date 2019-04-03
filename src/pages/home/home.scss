@@ -26,6 +26,7 @@
         padding-top: 42px;
         padding-left: 30px;
         @include flex;
+
         .userAvater {
           img {
             margin-right: 20px;
@@ -101,6 +102,7 @@
       padding: 0 50px 60px;
       display: flex;
       justify-content: space-between;
+
       .baseMenuItem {
         font-size: $font-26;
         color: #1e334a;
@@ -202,6 +204,30 @@
           background-size: contain;
           color: $write;
           font-size: $font-32;
+
+          &.bought {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('https://img.xuanyiai.com/mini_fortune_write_small.png') no-repeat;
+            background-size: contain;
+
+            .bought-title {
+              font-size: 24px;
+              line-height: 32px;
+              color: #7C6CFC;
+              padding: 0 40px;
+
+            }
+
+            .bought-keyword {
+              margin-top: 12px;
+              font-size: 32px;
+              color: #FFA984;
+              line-height: 32px;
+
+            }
+          }
         }
       }
     }

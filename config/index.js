@@ -19,11 +19,18 @@ module.exports = {
         }
       },
       '/mock': {
-        // target: "http://localhost:8080",
-        target: "http://192.168.2.122:8080",
+        target: "http://localhost:8080",
+        // target: "http://192.168.2.122:8080",
         // target: "http://192.168.99.160:8080",
         changeOrigin: false,
         pathRewrite: {'^/mock': ''}
+      },
+      '/api': {
+        target: "http://localhost:3000",
+        // target: "http://192.168.2.122:8080",
+        // target: "http://192.168.99.160:8080",
+        changeOrigin: false,
+        pathRewrite: {'^/api': ''}
       }
     },
 

@@ -1,6 +1,6 @@
 const Mock = require('mockjs')
 let piDetail = [{
-  "id": "19012600018024901171",
+    "id": "19012600018024901171",
     "is_locked": 1,
     "report_name": "密码解读",
     "master_code": 2,
@@ -1607,13 +1607,15 @@ Mock.mock('/mock/pi_friend', function (options) {
 Mock.mock('/mock/code_reading', function (options) {
   let id = JSON.parse(options.body).id
   let data = ''
-  for(let item of piDetail){
-    if(item.id == id){
+  for (let item of piDetail) {
+    if (item.id == id) {
       data = item
     }
   }
-  if(data == ''){
+  if (data == '') {
     data = piDetail[5]
   }
   return Mock.mock(data)
 })
+
+
