@@ -3,7 +3,7 @@
 }
 
 .pi_tab {
-  font-size: $font-28;
+  @include fontSize(28);
   border-bottom: 1px solid #eee;
 }
 
@@ -17,8 +17,7 @@
     margin-bottom: 0px;
 
     .list_item {
-      display: flex;
-      align-items: center;
+      @include flex($align:center);
       width: 100%;
       height: 172px;
       padding: 0 32px;
@@ -42,7 +41,7 @@
         .list_item_name {
           margin-bottom: 10px;
           color: #313131;
-          font-size: $font-28;
+          @include fontSize(28);
 
           img {
             width: 26px;
@@ -52,15 +51,12 @@
         }
 
         .list_item_desc {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: $font-24;
+          @include flex(space-between, center);
+          @include fontSize;
           color: #648AFF;
 
           .list_item_code {
-            display: flex;
-            align-items: center;
+            @include flex($align:center);
 
             img {
               margin: 0 8px;
@@ -71,8 +67,8 @@
 
           .list_item_relation {
             padding: 6px 10px;
-            font-size: $font-24;
-            line-height: $font-24;
+            @include fontSize;
+            line-height: 24px;
             color: $write;
             background: #648AFF;
             border-radius: 6px;
@@ -80,13 +76,11 @@
         }
 
         .match_item_info {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          @include flex(space-between, center);
 
           .match_item_degree {
             color: #333;
-            font-size: $font-24;
+            @include fontSize;
 
             a {
               margin-left: 6px;
@@ -100,9 +94,8 @@
     .load-more {
       height: 80px;
       line-height: 80px;
-      // background: #efefef;
       text-align: center;
-      font-size: $font-28;
+      @include fontSize(28);
       img{
         width: 40px;
         height: 40px;

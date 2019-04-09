@@ -1,19 +1,16 @@
 .friend-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex(center, $direction:column);
     position: relative;
     width: 100%;
     min-height: 100%;
-    background: url("http://img.xuanyiai.com/mini_info_bg.jpg") no-repeat;
+    background: url("#{$cloudUrl}/mini_info_bg.jpg") no-repeat;
     background-position: center center;
     background-size: 100% 100%;
   }
   .friend-title {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
     padding: 24px 50px 0 50px;
-    font-size: $font-28;
+    @include fontSize(28);
     color: #ffffff;
     img {
       width: 32px;
@@ -54,8 +51,7 @@
   }
   /* 填写信息通用 */
   .info-item {
-    display: flex;
-    align-items: center;
+    @include flex($align:center);
     margin: 0 56px;
     border-bottom: 1px solid #dfdfdf;
     .info-icon {
@@ -74,7 +70,7 @@
     }
   }
   .info-font {
-    font-size: $font-28;
+    @include fontSize(28);
     color: #999;
   }
   .info-arrow {
@@ -93,25 +89,21 @@
   }
   /* 性别 */
   .sex-box {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
   }
   .sex-value {
     height: 90px;
     line-height: 90px;
-    font-size: $font-28;
+    @include fontSize(28);
     color: #4a4a4a;
   }
   .sex-options {
-    display: flex;
-    align-items: center;
+    @include flex($align:center);
     height: 90px;
   }
   /* 选择生日 */
   .birth-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between, center);
     height: 100px;
     line-height: 100px;
   }
@@ -132,7 +124,7 @@
     text-align: center;
     background: #6b90ff;
     border-radius: 8px;
-    font-size: $font-32;
+    @include fontSize(32);
     color: #ffffff;
   }
   /* 生日 */
@@ -144,7 +136,7 @@
   .mint-datetime-action {
     width: 160px;
     color: #2f80f2;
-    font-size: $font-28;
+    @include fontSize(28);
   }
   .mint-datetime-confirm {
     color: #46bd45;
@@ -153,7 +145,7 @@
     padding: 40px 0;
   }
   .picker-slot {
-    font-size: $font-28;
+    @include fontSize(28);
   }
   /* 出生地点 */
   .place-box {

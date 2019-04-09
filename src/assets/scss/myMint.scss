@@ -1,6 +1,6 @@
 .mint-navbar .mint-tab-item {
   padding: 0;
-  @include flex-center;
+  @include flex(center,center);
   height: 86px;
 }
 
@@ -27,5 +27,5 @@
 }
 
 .picker-slot{
-    font-size: $font-24;
+    @include fontSize;
 }

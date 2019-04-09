@@ -1,59 +1,42 @@
-$font-12:12px;
-$font-13:13px;
-$font-14:14px;
-$font-15:15px;
-$font-16:16px;
-$font-17:17px;
-$font-18:18px;
-
-$font-24:24px;
-$font-26:26px;
-$font-28:28px;
-$font-30:30px;
-$font-32:32px;
-$font-34:34px;
-$font-36:36px;
-$font-38:38px;
-$font-48:48px;
-
 $write:#ffffff;
 $black:#000;
+$staticUrl:'~@/assets/img/';
+$cloudUrl:'https://img.xuanyiai.com';
 
-@mixin flex {
-    display: flex
-}
-@mixin flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// 字体
+@mixin fontSize($num:24) {
+  font-size: $num + px
 }
 
-@mixin  flex-row-vertical {
-    display: flex;
-    align-items: center
+// 弹性盒模型
+@mixin flex($justity:flex-start, $align:stretch, $direction:row, ) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justity;
 }
 
-@mixin flex-row-center {
-    display: flex;
-    justify-content: center
+// 定位
+@mixin position($pos:static, $t:auto, $l:auto, $r:auto, $b:auto) {
+  position: $pos;
+  left: $l;
+  right: $r;
+  top: $t;
+  bottom: $b;
 }
 
+// 背景
+@mixin bg($color:transparent, $url:none, $size:contain, $pos1:0%, $pos2:0%) {
+  background-color: $color;
+  background-repeat: no-repeat;
+  background-position: $pos1 $pos2;
+  background-size: $size;
 
-@mixin flex-center-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  @if $url==none {
+    background-image: none
+  }
 
-@mixin  flex-column-vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-@mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center
+  @else {
+    background-image: url($url);
+  }
 }

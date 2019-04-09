@@ -4,23 +4,23 @@
   .lover {
     width: 100%;
     min-height: 100vh;
-    background: url('../../../assets/img/love_bg.png') no-repeat;
+    background: url('#{$staticUrl}/love_bg.png') no-repeat;
     background-size: 750px 1650px;
     .lover-desc {
       padding: 40px 40px 0;
-      font-size: $font-28;
+      @include fontSize(28);
       line-height: 56px;
       color: #265BC0;
     }
 
     .lover-title {
-      @include flex-center;
+      @include flex(center,center);
       margin: 78px auto 0;
       width: 622px;
       height: 86px;
       color: $write;
-      font-size: $font-30;
-      background: url('../../../assets/img/love_title.png') no-repeat;
+      @include fontSize(30);
+      background: url('#{$staticUrl}/love_title.png') no-repeat;
       background-size: 622px 86px;
       border-radius: 32px;
     }
@@ -45,12 +45,10 @@
 
         .add-item-not {
           height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex(center,center);
 
           .add-item-title {
-            font-size: $font-30;
+            @include fontSize(30);
             color: $write;
             letter-spacing: 16px;
           }
@@ -63,17 +61,13 @@
         }
 
         .add-item-selected {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          @include flex(center,$direction:column);
           width: 610px;
           height: 236px;
           padding: 0px 66px 0;
 
           .selected-info {
-            display: flex;
-            align-items: center;
-            // justify-content: space-between;
+            @include flex($align:center);
 
             .selected-info-avater {
               margin-right: 38px;
@@ -91,11 +85,10 @@
 
             .selected-info-desc {
               .selected-info-name {
-                display: flex;
-                align-items: center;
+                @include flex($align:center);
 
                 p {
-                  font-size: $font-30;
+                  @include fontSize(30);
                   color: $write;
                 }
 
@@ -108,9 +101,8 @@
 
               .selected-info-code {
                 margin-top: 18px;
-                display: flex;
-                align-items: center;
-                font-size: $font-26;
+                @include flex($align:center);
+                @include fontSize(26);
                 color: #265BC0;
                 letter-spacing: 0;
                 font-weight: bold;
@@ -125,18 +117,16 @@
           }
 
           .selected-btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex(space-around,center);
             margin-top: 20px;
 
             div {
-              @include flex-center;
+              @include flex(center,center);
               width: 200px;
               height: 46px;
               background: $write;
               border-radius: 32px;
-              font-size: $font-26;
+              @include fontSize(26);
               color: #265BC0;
             }
           }
@@ -151,13 +141,13 @@
     .viewReport {
       padding: 30px 0 70px;
       div {
-        @include flex-center;
+        @include flex(center,center);
         margin: auto;
         width: 420px;
         height: 80px;
         background: $write;
         border-radius: 45px;
-        font-size: $font-30;
+        @include fontSize(30);
         color: #265BC0;
         letter-spacing: 0;
         font-weight: bold
@@ -166,7 +156,7 @@
   }
 
   .wife {
-    background: url('../../../assets/img/wife_bg.png') no-repeat;
+    background: url('#{$staticUrl}/wife_bg.png') no-repeat;
     background-size: 750px 1650px;
   }
 }

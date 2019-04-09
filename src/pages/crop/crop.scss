@@ -10,16 +10,14 @@
   top: -999px;
 }
 .cropBtn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(space-around,center);
   position: fixed;
   bottom: 0;
   background: #fff;
   border-top: 1px solid #efefef;
   height: 80px;
   width: 100%;
-  font-size: 28px;
+  @include fontSize(28);
   padding: 0 40px;
   .cropBtnItem {
     width: 50%;

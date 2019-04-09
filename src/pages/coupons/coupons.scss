@@ -1,17 +1,14 @@
 .coupons-page {
     position: relative;
-    background: #566cd3;
+    @include bg(#566cd3);
   }
   .coupons-invita {
     width: 100%;
     height: 536px;
-    background: url('https://img.xuanyiai.com/mini_ticket_bg.png') no-repeat;
-    background-size: contain;
+    @include bg($url:'#{$cloudUrl}/mini_ticket_bg.png')
   }
   .invita-main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex($align:center,$direction:column);
     padding-top: 226px;
     width: 100%;
     height: 356px;
@@ -19,7 +16,7 @@
   }
   .invita-desc {
     p {
-      font-size: $font-38;
+      @include fontSize(38);
       color: #566cd3;
       letter-spacing: 4px;
       font-weight: bold;
@@ -27,18 +24,18 @@
   }
   .invita-num {
     margin-top: 38px;
-    font-size: $font-26;
+    @include fontSize(26);
     color: #566cd3;
     a {
-      font-size: $font-36;
+      @include fontSize(36);
     }
   }
   .invita-btn {
     margin-top: 16px;
     width: 288px;
     height: 60px;
-    background: #fe895c;
-    font-size: $font-26;
+    @include bg(#fe895c);
+    @include fontSize(26);
     color: #ffffff;
     line-height: 60px;
     text-align: center;
@@ -53,7 +50,7 @@
     margin: 0 auto 40px;
     width: 670px;
     height: 220px;
-    background: #ffffff;
+    @include bg(#fff);
     border-radius: 10px;
   }
   .coupons-item-title {
@@ -61,11 +58,11 @@
     padding-left: 28px;
     p {
       &:first-child {
-        font-size: $font-28;
+        @include fontSize(28);
       }
       &:last-child {
         margin-top: 6px;
-        font-size: $font-24;
+        @include fontSize;
         color: #9b9b9b;
       }
     }
@@ -87,7 +84,7 @@
       color: #648aff;
     }
     .coupons-item-state {
-      background: #648aff;
+      @include bg(#648aff);
     }
   }
   .coupons-item-ora {
@@ -107,7 +104,7 @@
       color: #fe895c;
     }
     .coupons-item-state {
-      background: #fe895c;
+      @include bg(#fe895c)
     }
   }
   .coupons-item-gray {
@@ -127,16 +124,14 @@
       color: #bdbdbd;
     }
     .coupons-item-state {
-      background: #bdbdbd;
+      @include bg(#bdbdbd)
     }
   }
   .coupons-item-line {
     position: relative;
     width: 100%;
     height: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(center,center);
     margin-top: 14px;
     overflow: hidden;
     .semicircle {
@@ -145,7 +140,7 @@
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      background: #566cd3;
+      @include bg(#566cd3);
       &.line-left {
         left: -13px;
       }
@@ -158,12 +153,11 @@
     }
   }
   .coupons-item-use {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-around);
     padding: 16px 28px 0;
   }
   .coupons-item-num {
-    font-size: $font-28;
+    @include fontSize(28);
   }
   .coupons-item-state {
     width: 132px;
@@ -171,7 +165,7 @@
     line-height: 40px;
     text-align: center;
     border-radius: 10px;
-    font-size: $font-24;
+    @include fontSize;
     color: #ffffff;
   }
   /* 规则 */
@@ -180,7 +174,7 @@
     padding-bottom: 60px;
     width: 654px;
     p {
-      font-size: $font-24;
+      @include fontSize;
       color: #ffffff;
       opacity: 0.5;
       line-height: 38px;

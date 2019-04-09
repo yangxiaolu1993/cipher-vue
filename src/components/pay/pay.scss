@@ -10,18 +10,17 @@
   color: #6b90ff;
   text-align: center;
   .fortune-pay-float-desc-item {
-    font-size: $font-34;
+    @include fontSize(34);
     font-weight: bold;
   }
 }
 .fortune-pay-float-desc-people {
-  @include flex-center;
+  @include flex(center, center);
   padding: 40px 0px 30px;
   border-bottom: 1px solid rgba(171,171,171,0.4);
   div {
-    font-size: $font-32;
-    display: flex;
-    align-items: center;
+    @include fontSize(32);
+    @include flex($align:center);
   }
   .fortune-pay-float-desc-name {
     max-width: 270px;
@@ -47,13 +46,13 @@
   padding: 22px 8px 0;
   text-align: left;
   div {
-    font-size: $font-24;
+    @include fontSize;
     line-height: 40px;
     color: #a9a9a9;
   }
 }
 .fortune-pay-money {
-  @include flex-center;
+  @include flex(center, center);
   margin-top: 24px;
   height: 90px;
   width: 100%;
@@ -61,10 +60,10 @@
   .fortune-pay-money-item {
     width: 374px;
     text-align: center;
-    font-size: $font-36;
+    @include fontSize(36);
     color: #fff;
     &.pay-money {
-      @include flex-center;
+      @include flex(center, center);
       height: 36px;
     }
   }
@@ -72,7 +71,7 @@
     div {
       &:first-child {
         max-width: 90px;
-        font-size: $font-24;
+        @include fontSize;
         margin-right: 6px;
         line-height: 30px;
         border: 1px solid $write;
@@ -84,13 +83,13 @@
         }
       }
       &:nth-child(2) {
-        font-size: $font-34;
-        line-height: $font-34;
+        @include fontSize(34);
+        line-height: 34px;
         font-weight: bold;
       }
       &:nth-child(3) {
-        font-size: $font-26;
-        line-height: $font-26;
+        @include fontSize(26);
+        line-height: 26px;
         color: #bccfff;
         margin-left: 8px;
       }

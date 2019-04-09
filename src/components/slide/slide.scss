@@ -24,7 +24,7 @@
         top: 0;
         color:#fff;
         text-align: center;
-        font-size: $font-28;
+        @include fontSize(28);
         line-height: 172px;
     }
 }

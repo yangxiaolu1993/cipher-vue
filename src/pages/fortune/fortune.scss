@@ -3,9 +3,10 @@
   padding-bottom: 130px;
   width: 100%;
   min-height: 100%;
-  background: url('../../assets/img/minifortune_bg.jpg') no-repeat;
+  background: url('#{$staticUrl}/minifortune_bg.jpg') no-repeat;
   background-size: cover;
 }
+
 .fortune-top {
   margin: 0px auto 0;
   padding: 8px 10px;
@@ -14,6 +15,7 @@
   background: #ed86ff;
   border-radius: 12px;
 }
+
 .fortune-top-box {
   padding-top: 30px;
   width: 100%;
@@ -21,20 +23,21 @@
   border: 1px solid #ffffff;
   border-radius: 6px;
   text-align: center;
+
   .fortune-top-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex(center, $direction: column);
     height: 80px;
   }
 }
+
 .fortune-top-group {
   p {
     color: #fff;
-    font-size: $font-30;
+    @include fontSize(30);
     font-weight: bold;
   }
 }
+
 /* 影响财运关键词 */
 .fortune-keyword {
   position: absolute;
@@ -44,31 +47,35 @@
   height: 330px;
   margin-left: -254px;
   text-align: center;
-  background: url('../../assets/img/minireport_back.png') no-repeat;
+  background: url('#{$staticUrl}/minireport_back.png') no-repeat;
   background-size: contain;
 }
+
 .fortune-name {
   width: 400px;
   margin: 50px auto 0;
-  font-size: $font-30;
+  @include fontSize(30);
   color: #a53b00;
   font-weight: bold;
 }
+
 .fortune-text {
   margin-top: 42px;
-  font-size: $font-24;
-  line-height: $font-24;
+  @include fontSize;
+  line-height: 24px;
   color: #da8a68;
 }
+
 .fortune-keyword-group {
-  display: flex;
-  justify-content: space-around;
+  @include flex(space-around);
   padding: 20px 30px 0;
+
   .fortune-keyword-item {
     width: 120px;
     height: 120px;
-    background: url('../../assets/img/minireport_font.png') no-repeat;
+    background: url('#{$staticUrl}/minireport_font.png') no-repeat;
     background-size: contain;
+
     p {
       display: inline-block;
       font-size: 96px;
@@ -77,151 +84,185 @@
     }
   }
 }
+
 /* 报告内容 */
 .fortune-container {
   margin-top: 260px;
   padding: 0 30px;
 }
+
 .fortune-code {
   float: left;
   width: 336px;
   height: 232px;
   color: #fff;
   margin: 48px 0px 20px 0px;
+
   .wrapper-desc {
-    font-size: $font-26;
+    @include fontSize(26);
     color: #aadaff;
     margin-top: 20px;
     margin-left: 40px;
   }
 }
+
 .fortune-desc {
-  font-size: $font-28;
+  @include fontSize(28);
   line-height: 50px;
   color: #ffffff;
   text-align: justify;
+
   &.fuzzy {
     color: transparent;
     text-shadow: #fff 0 0 16px;
   }
 }
+
 /* 三角形 */
 .wrapper {
   position: relative;
   width: 214px;
   height: 182px;
   margin-left: 44px;
-  background: url('../../assets/img/minireport_sj.png') no-repeat;
+  background: url('#{$staticUrl}/minireport_sj.png') no-repeat;
   background-size: contain;
+
   .code-floor {
     position: absolute;
+
     p {
       display: inline-block;
       width: 30px;
       height: 30px;
-      font-size: $font-24;
+      @include fontSize;
       line-height: 30px;
       color: #dde1ff;
       text-align: center;
     }
   }
 }
+
 /* 第一层 */
 .floor-first {
   bottom: 12px;
+
   .code-i {
     margin-left: 32px;
   }
+
   .code-j {
     margin-left: 8px;
   }
+
   .code-k {
     margin-left: 16px;
   }
+
   .code-l {
     margin-left: 6px;
   }
 }
+
 /* 第二层 */
 .floor-second {
   bottom: 66px;
+
   .code-m {
     margin-left: 64px;
   }
+
   .code-n {
     margin-left: 30px;
   }
 }
+
 /* 第三层 */
 .floor-third {
   width: 256px;
   bottom: 100px;
+
   .left-code-group {
     margin-left: -42px;
+
     .code-s {
       margin-right: 8px;
     }
+
     .code-x {
       margin-left: 8px;
       margin-right: 8px;
     }
   }
+
   .right-code-group {
     .code-v {
       margin-right: 8px;
     }
+
     .code-u {
       margin-right: 8px;
     }
+
     .code-t {
       margin-left: 8px;
     }
   }
 }
+
 .floor-third .left-code-group p,
-  .floor-third .right-code-group p {
+.floor-third .right-code-group p {
   width: auto;
 }
+
 /* 第四层 */
 .floor-fourth {
   bottom: 118px;
+
   .code-o {
     margin-left: 92px;
     font-size: 38px !important;
     color: #99dbff !important;
   }
 }
+
 /* 第五层 */
 .floor-fifth {
   top: -28px;
+
   .code-q {
     margin-left: 66px;
   }
+
   .code-p {
     margin-left: 24px;
   }
 }
+
 /* 第六层 */
 .floor-sixth {
   top: -42px;
+
   .code-r {
     margin-left: 92px;
   }
 }
+
 /* 提示 */
 .fortune-tip {
   margin: 40px 30px 0;
-  font-size: $font-24;
+  @include fontSize;
   color: #baa3ff;
   line-height: 44px;
 }
+
 /* 关于生命密码 */
 .aboutCode {
   margin-top: 40px;
-  font-size: $font-30;
-  line-height: $font-30;
+  @include fontSize(30);
+  line-height: 30px;
   color: #ffffff;
   text-align: right;
+
   img {
     margin: 0 40px 0 16px;
     width: 28px;
@@ -229,6 +270,7 @@
     vertical-align: middle;
   }
 }
+
 /* 底部 */
 .fortune-bottom {
   position: fixed;
@@ -237,92 +279,109 @@
   width: 100%;
   z-index: 100;
 }
+
 .fortune-pay,
-  .fortune-pay-ticket,
-  .fortune-pay-over,
-  .toPlay {
+.fortune-pay-ticket,
+.fortune-pay-over,
+.toPlay {
   height: 90px;
   border-top: 1px solid#f7f7f7;
 }
+
 /* 底部-支付-解码券+购买 */
 .fortune-pay {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-around, center);
 }
+
 .fortune-pay-item {
   text-align: center;
+
   img {
     width: 36px;
     height: 36px;
     vertical-align: middle;
   }
+
   &:first-child {
     img {
       margin-right: 46px;
     }
   }
+
   &:last-child {
     p {
       display: inline-block;
-      font-size: $font-36;
+      @include fontSize(36);
       color: #ff8a58;
       font-weight: bold;
       margin: 0 4px;
     }
   }
 }
+
 .fortune-pay-line {
   height: 38px;
   border-left: 1px solid #f7f7f7;
 }
-.fortune-pay-item:first-child,
-  .fortune-pay-item:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 372px;
-  font-size: $font-32;
-  color: #ffffff;
+
+.fortune-pay-item {
+
+  &:first-child,&:last-child {
+    @include flex(center, center);
+    width: 372px;
+    @include fontSize(32);
+    color: #ffffff;
+  }
+
 }
+
 /* 底部-支付-完成 */
 .fortune-pay-over {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-around, center);
 }
-.fortune-pay-over-item:first-child,
-  .fortune-pay-over-item:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 572px;
-  font-size: $font-32;
-  color: #ffffff;
-  text-align: center;
+
+.fortune-pay-over-item {
+
+  &:first-child,&:last-child {
+    @include flex(center, center);
+    width: 572px;
+    @include fontSize(32);
+    color: #ffffff;
+    text-align: center;
+  }
 }
-.fortune-pay-over-item:first-child img,
-  .fortune-pay-over-item:last-child img {
-  margin-right: 46px;
-  height: 36px;
-  vertical-align: middle;
+
+.fortune-pay-over-item {
+
+  &:first-child,
+  &:last-child {
+    img {
+      margin-right: 46px;
+      height: 36px;
+      vertical-align: middle;
+    }
+  }
+
 }
+
 .fortune-pay-over-item {
   &:first-child {
     img {
       width: 36px;
     }
   }
+
   &:last-child {
     img {
       width: 32px;
     }
   }
 }
+
 /* 底部-我也要测 */
 .toPlay {
   line-height: 90px;
   text-align: center;
   color: #fff;
-  font-size: $font-32;
+  @include fontSize(32);
 }

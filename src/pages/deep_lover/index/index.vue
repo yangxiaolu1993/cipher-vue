@@ -11,6 +11,3 @@
 import indexjs from "./indexjs.js";
 export default indexjs;
 </script>
-<style lang='scss' scoped>
-@import "index";
-</style>

@@ -3,8 +3,7 @@
 .matchreport {
   width: 100%;
   min-height: 100vh;
-  background: #049ce5 url('http://img.xuanyiai.com/mini_matching_report_bg.jpg') no-repeat;
-  background-size: 750px 2180px;
+  @include bg(#049ce5,$url:'#{$cloudUrl}/mini_matching_report_bg.jpg',$size:750px 2180px);
   padding-top: 100px;
 }
 /* 水球 */
@@ -90,23 +89,17 @@
 .wave-content {
   position: absolute;
   bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include flex(space-between, flex-end);
   height: 318px;
   width: 516px;
-  background: url('http://img.xuanyiai.com/mini_matching_people.png') no-repeat center center;
-  background-size: 514px 318px;
+  @include bg($url:'#{$cloudUrl}/mini_matching_people.png',$size:514px 318px,$pos1:center,$pos2:center);
   z-index: 100;
   .circle-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between, center,column);
     width: 260px;
     height: 246px;
     margin-bottom: 6px;
-    font-size: $font-28;
+    @include fontSize(28);
     color: #ffffff;
     &.people-one {
       padding-left: 24px;
@@ -131,6 +124,6 @@
   white-space: nowrap;
 }
 .circle-item-code {
-  font-size: $font-28;
-  line-height: $font-28;
+  @include fontSize(28);
+  line-height: 28px;
 }

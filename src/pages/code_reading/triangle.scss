@@ -1,6 +1,6 @@
 .code_item {
-    position: absolute;
-    font-size: $font-36;
+    @include position(absolute);
+    @include fontSize(36);
     color: $write;
   }
 
@@ -42,7 +42,7 @@
 
   .code_item_o {
     left: 358px;
-    font-size: 56px;
+    @include fontSize(56);
     color: #99DBFF;
     font-weight: bold
   }

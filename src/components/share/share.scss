@@ -20,13 +20,13 @@
     }
   }
   .shareBtn {
-    @include flex-center;
+    @include flex(center, center);
     width: 100%;
     height: 74px;
     margin-top: 32px;
     background: #6d98fe;
     border-radius: 10px;
-    font-size: $font-28;
+    @include fontSize(28);
     color: $write;
     img {
       margin-right: 20px;
