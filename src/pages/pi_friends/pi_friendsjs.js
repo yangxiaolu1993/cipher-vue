@@ -99,12 +99,13 @@ export default {
         } else {
           that.matchScroll.request = true
         }
-        that.$HTTP.pifriend({
+
+        that.$HTTP.friend_list({
           type: type,
           page_size: pageSize,
           index: index
-        }).then((res) => {
-
+        }).then((res)=>{
+          console.log(res)
           let data = res.data.list
           let total = res.data.total
           for (let item of data) {
@@ -135,14 +136,13 @@ export default {
                 that.matchScroll.loading = false
               }
             }
-            // Indicator.close()
             that.addScroll.request = false
             that.matchScroll.request = false
           }, 2000)
-
         })
       }
 
+      
     },
     /**
      * 选择派友进行跳转

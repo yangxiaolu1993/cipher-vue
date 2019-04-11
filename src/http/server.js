@@ -1,53 +1,28 @@
-import Axios from 'axios'
-import HttpUrl from './url'
-
-// Axios.defaults.baseURL = '/mimapi'
-Axios.defaults.headers.post['Token'] = 'a1e79e93d5dd687cb0be9d63eb6a35a17be84f03ab6df490bb242108cadaababdbd6538e344740a744549cdb404b9c6d84ac0683e4b86781';
-Axios.defaults.headers.post['Content-Type'] = 'application/json';
-Axios.defaults.headers.post['XY-Agent'] = JSON.stringify({ "app_version": "1.1.2", "os": 2, "channel": 3 });
+import HttpUrl from "./url";
+import HttpRequest from "./HttpRequest";
 
 class InterServer {
-    constructor() {
-        this.banner = this.$POST(HttpUrl.banner)
-        this.reportList = this.$POST(HttpUrl.reportList)
-        this.fortuneDetail = this.$POST(HttpUrl.fortuneDetail)
-        this.couponsinit = this.$POST(HttpUrl.couponsinit)
-        this.getcoupons = this.$POST(HttpUrl.getcoupons)
-        this.pifriend = this.$POST(HttpUrl.pifriend)
-        this.codeReading = this.$POST(HttpUrl.codeReading)
+  constructor() {
+    this.banner = HttpRequest.post(HttpUrl.banner);
+    this.reportList = HttpRequest.post(HttpUrl.reportList);
+    this.fortuneDetail = HttpRequest.post(HttpUrl.fortuneDetail);
+    this.couponsinit = HttpRequest.post(HttpUrl.couponsinit);
+    this.getcoupons = HttpRequest.post(HttpUrl.getcoupons);
+    this.pifriend = HttpRequest.post(HttpUrl.pifriend);
+    this.codeReading = HttpRequest.post(HttpUrl.codeReading);
 
-        this.swiper = this.$GET(HttpUrl.swiper)
-        this.mini_report = this.$GET(HttpUrl.mini_report)
-        this.deep_report = this.$GET(HttpUrl.deep_report)
-        this.mini_fortune = this.$GET(HttpUrl.mini_fortune)
-    }
-    $POST(url){
-        
-        return (param)=>{
-            if(param){
-               return Axios.post(url, {
-                    ...param
-                })
-            }else{
-               return Axios.post(url)
-            }
-            
-        }
-    }
-    $GET(url){
-        return (param)=>{
-            if(param){
-                return Axios.get(url, {
-                    ...param
-                })
-            }else{
-                return Axios.get(url)
-            }
-            
-        }
-    }
+    /**
+     * 数据请求使用express+mongodb
+     */
+    this.exam = HttpRequest.get(HttpUrl.exam);
+    this.swiper = HttpRequest.get(HttpUrl.swiper);
+    this.mini_report = HttpRequest.get(HttpUrl.mini_report);
+    this.deep_report = HttpRequest.get(HttpUrl.deep_report);
+    this.mini_fortune = HttpRequest.get(HttpUrl.mini_fortune);  
+    this.card = HttpRequest.get(HttpUrl.card)
+    this.fortune_report = HttpRequest.get(HttpUrl.fortune_report)
+    this.friend_list = HttpRequest.get(HttpUrl.friend_list)
+  }
 }
 
-
-
-export default new InterServer()
+export default new InterServer();

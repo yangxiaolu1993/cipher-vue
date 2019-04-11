@@ -11,13 +11,13 @@
     </div>
     <!-- 影响财运关键词 -->
     <div class="fortune-keyword">
-      <div class="fortune-name">{{fortuneDetail.nickname}}</div>
-      <div class="fortune-text">{{fortuneDetail.connect_str}}</div>
+      <div class="fortune-name">{{fortuneDetail.nickname || '密码π'}}</div>
+      <div class="fortune-text">{{fortuneDetail.connect_str || '你需要处理XX'}}</div>
       <div class="fortune-keyword-group">
         <div
           class="fortune-keyword-item"
-          v-for="item in (fortuneDetail.keyword || ['0','1','2'])"
-          :key="item"
+          v-for="(item,index) in (fortuneDetail.keyword || ['?','?','?'])"
+          :key="index"
         >
           <p>{{item}}</p>
         </div>

@@ -2,7 +2,7 @@ export default {
     data() {
         return {
             swiper: [],
-            fortune: [],
+            fortune: [{},{},{},{},{},{},{},{}],
             depth: [],
             vuex: this.$store.state.HW,
             attrs:{'data-id':'1'}
@@ -20,20 +20,25 @@ export default {
         init() {
             // 轮播图
             this.$HTTP.swiper().then(res => {
-                // console.log(res)
                 this.swiper = res.data;
             });
-            // 小报告、大报告列表
+            // 小报告默认列表
             this.$HTTP.mini_report().then(res=>{
                 this.fortune = res.data;
             })
+            // 大报告默认列表
             this.$HTTP.deep_report().then(res=>{
                 this.depth = res.data;
             })
-
+            //已购买小报告
             this.$HTTP.mini_fortune().then(res=>{
-                console.log(res.data)
                 this.fortune = res.data;
+            })
+
+            // 测试
+            this.$HTTP.exam().then(res=>{
+                // this.fortune = res.data;
+                console.log(res.data)
             })
         },
         /**
