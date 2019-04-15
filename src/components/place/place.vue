@@ -18,6 +18,7 @@ export default {
     return {
       show: false,
       areaValue: "",
+      area:{},
       slots: [
         {
           flex: 1,
@@ -55,11 +56,16 @@ export default {
         picker.setSlotValues(0, val);
       }
       this.areaValue = val[0].name + " " + val[1].name;
+      this.area = {
+        value :this.areaValue,
+        lat:val[1].lat,
+        lng:val[1].lng
+      }
     },
     // 确定
     locationConfirm() {
         this.show = false
-      this.$emit("confirm", this.areaValue);
+      this.$emit("confirm", this.area);
     },
     // 取消
     locationCancel() {

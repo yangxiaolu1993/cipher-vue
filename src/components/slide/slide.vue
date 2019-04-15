@@ -21,3 +21,7 @@
 import slidejs from './slidejs.js';
 export default slidejs
 </script>
+
+<style lang='scss' scoped>
+@import "slide";
+</style>

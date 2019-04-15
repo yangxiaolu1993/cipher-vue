@@ -5,7 +5,6 @@
       <mt-tab-item id="add">来自添加</mt-tab-item>
       <mt-tab-item id="match">来自匹配</mt-tab-item>
     </mt-navbar>
-
     <!-- tab-container -->
     <mt-tab-container v-model="selected">
       <mt-tab-container-item id="add">
@@ -15,9 +14,10 @@
           :pullup="addScroll.pullup"
           @scrollToEnd="addScroll.request?'':getPiFriend(1,addList.length)"
           :style="{height:addScroll.height+'px'}"
+          v-if="addList.length != 0"
         >
           <div class="list_contain" ref="addContent">
-            <slide v-for="item in addList" :key="item.id" :isplace='addPlace' @start="start(1)" @end="end(1)" @del="del(item.id)">
+            <slide v-for="item in addList" :key="item.id" :isplace='addPlace' @start="start(1)" @end="end(1)" @del="del(item.origin,item.id)">
               <div class="list_item" @click="chooseFriend(item)">
                 <div class="list_item_avater">
                   <img :src="item.avatar" alt>
@@ -45,14 +45,21 @@
               </div>
             </slide>
 
-            <div class="load-more">
-              <a v-if="addScroll.loading && !(addListTotal>addList.length)">
+            
+ 
+            <div class="load-more" v-if="addList.length != 0">
+              <a v-if="addScroll.loading && (addListTotal>addList.length)">
                 <img src="../../assets/img/loading.gif">加载更多
               </a>
-              <a v-if="addScroll.loading && (addListTotal>addList.length)">没有更多...</a>
+              <a v-if="addScroll.loading && (addListTotal==addList.length)">没有更多...</a>
             </div>
           </div>
         </scroll>
+
+        <div class="noData" v-if="addList.length == 0">
+          <div><img src="../../assets/img/icon_empty.png" alt=""></div>
+          <div class="noDataText">快去添加好友吧~</div>
+        </div>
       </mt-tab-container-item>
       <mt-tab-container-item id="match">
         <scroll
@@ -61,6 +68,7 @@
           :pullup="matchScroll.pullup"
           @scrollToEnd="matchScroll.request?'':getPiFriend(2,matchList.length)"
           :style="{height:matchScroll.height+'px'}"
+          v-if="matchList.length != 0"
         >
           <div class="list_contain" ref="matchContent">
             <slide v-for="item in matchList" :key="item.id" :isplace='matchPlace' @start="start(2)" @end="end(2)" @del="del(item.id)">
@@ -93,7 +101,7 @@
               </div>
             </slide>
 
-            <div class="load-more">
+            <div class="load-more" v-if="matchList.length != 0">
               <a v-if="matchScroll.loading && (matchListTotal>matchList.length)">
                 <img src="../../assets/img/loading.gif">加载更多
               </a>
@@ -101,6 +109,10 @@
             </div>
           </div>
         </scroll>
+        <div class="noData" v-if="matchList.length == 0">
+          <div><img src="../../assets/img/icon_empty.png" alt=""></div>
+          <div class="noDataText">快去添加好友吧~</div>
+        </div>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>

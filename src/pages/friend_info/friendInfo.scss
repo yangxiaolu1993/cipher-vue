@@ -72,6 +72,10 @@
   .info-font {
     @include fontSize(28);
     color: #999;
+
+    &.info-font-active{
+      color: #4a4a4a
+    }
   }
   .info-arrow {
     img {

@@ -48,7 +48,7 @@
         </div>
         <div class="info-main birth-content" @click="birth">
           <div class="birth-box">
-            <div class="info-font">{{birthValue==''?'出生日期':birthValue}}</div>
+            <div class="info-font" :class="birthValue==''?'':'info-font-active'">{{birthValue==''?'出生日期':birthValue}}</div>
             <div class="info-arrow">
               <img src="../../assets/img/single_arrow_icon.png" alt>
             </div>
@@ -74,7 +74,7 @@
         </div>
         <div class="info-main birth-content" @click="time">
           <div class="birth-box">
-            <div class="info-font">{{timeValue==''?'出生时间':timeValue}}</div>
+            <div class="info-font" :class="timeValue==''?'':'info-font-active'">{{timeValue==''?'出生时间':timeValue}}</div>
             <div class="info-arrow">
               <img src="../../assets/img/single_arrow_icon.png" alt>
             </div>
@@ -96,7 +96,7 @@
         </div>
         <div class="info-main birth-content place-content" @click="location">
           <div class="birth-box place-box">
-            <div class="info-font" >{{placeVal == ''?'出生地点':placeVal}}</div>
+            <div class="info-font" :class="placeVal==''?'':'info-font-active'">{{placeVal == ''?'出生地点':placeVal}}</div>
             <div class="info-arrow">
               <img src="../../assets/img/single_arrow_icon.png" alt>
             </div>

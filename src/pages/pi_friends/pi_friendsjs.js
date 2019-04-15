@@ -93,19 +93,25 @@ export default {
      */
     getPiFriend(type, index = 0, pageSize = 10) {
       let that = this
+      if(type == 1){
+        if(that.addList.length==that.addListTotal && that.addList.length !=0) return;
+      }else{
+        if(that.matchList.length==that.matchListTotal && that.matchList.length !=0) return;
+      }
+      
       if (type == 1 && !that.addScroll.request || type == 2 && !that.matchScroll.request) {
         if (type == 1) {
           that.addScroll.request = true
         } else {
           that.matchScroll.request = true
         }
+        
 
         that.$HTTP.friend_list({
           type: type,
           page_size: pageSize,
           index: index
         }).then((res)=>{
-          console.log(res)
           let data = res.data.list
           let total = res.data.total
           for (let item of data) {
@@ -114,31 +120,29 @@ export default {
             }
 
           }
-          setTimeout(function () {
-            if (type == 1) {
-              that.addList.push(...data)
-              that.addListTotal = total
-              if (that.addScroll.height < that.addList.length * 86) {
-                that.addScroll.pullup = 'true'
-                that.addScroll.loading = true
-              } else {
-                that.addScroll.pullup = 'false'
-                that.addScroll.loading = false
-              }
+          if (type == 1) {
+            that.addList.push(...data)
+            that.addListTotal = total
+            if (that.addScroll.height < that.addList.length * 86) {
+              that.addScroll.pullup = 'true'
+              that.addScroll.loading = true
             } else {
-              that.matchList.push(...data)
-              that.matchListTotal = total
-              if (that.matchScroll.height < that.matchList.length * 86) {
-                that.matchScroll.pullup = 'true'
-                that.matchScroll.loading = true
-              } else {
-                that.matchScroll.pullup = 'false'
-                that.matchScroll.loading = false
-              }
+              that.addScroll.pullup = 'false'
+              that.addScroll.loading = false
             }
-            that.addScroll.request = false
-            that.matchScroll.request = false
-          }, 2000)
+          } else {
+            that.matchList.push(...data)
+            that.matchListTotal = total
+            if (that.matchScroll.height < that.matchList.length * 86) {
+              that.matchScroll.pullup = 'true'
+              that.matchScroll.loading = true
+            } else {
+              that.matchScroll.pullup = 'false'
+              that.matchScroll.loading = false
+            }
+          }
+          that.addScroll.request = false
+          that.matchScroll.request = false
         })
       }
 
@@ -221,18 +225,41 @@ export default {
      * 删除
      * @param {*} id 
      */
-    del(id) {
+    del(origin,id) {
       console.log(id)
+      let that = this
       MessageBox({
         title: '',
-        message: '是否删除π友' + id,
+        message: '是否删除π友',
         showCancelButton: true,
         confirmButtonText: "确定",
         cancelButtonText: "取消"
       }).then(action => {
         if (action == 'confirm') {
-          console.log('删除成功')
-          Toast('删除成功')
+          // console.log('删除成功')
+          that.$HTTP.delete_friend({
+            id:id
+          }).then((res)=>{
+            console.log(res)
+            if(res.data.code == 200){
+              Toast('删除成功')
+              let data = that.addList
+
+              if(origin == 2){
+                data = that.matchList
+                that.matchListTotal = that.matchListTotal-1
+              }else{
+                that.addListTotal = that.addListTotal-1
+              }
+              for(let i in data){
+                if(data[i].id == id){
+                  data.splice(i, 1)
+                }
+              }
+            }
+          })
+
+          
 
         } else {
           console.log('取消')
