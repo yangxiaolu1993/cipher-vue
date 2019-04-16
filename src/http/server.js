@@ -24,6 +24,7 @@ class InterServer {
     this.friend_list = HttpRequest.get(HttpUrl.friend_list)
     this.add_friend = HttpRequest.get(HttpUrl.add_friend)
     this.delete_friend = HttpRequest.get(HttpUrl.delete_friend)
+    this.code_reading = HttpRequest.get(HttpUrl.code_reading)
   }
 }
 

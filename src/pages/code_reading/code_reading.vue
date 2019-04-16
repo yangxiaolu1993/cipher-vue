@@ -54,7 +54,7 @@
             <div>内心密码</div>
           </div>
           <div class="code_detail_item">
-            <div>{{reading.five_elements}}</div>
+            <div><img :src='reading.five_elements' alt=""></div>
             <div>五行属性</div>
           </div>
         </div>
