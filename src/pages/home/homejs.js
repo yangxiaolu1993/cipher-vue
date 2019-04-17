@@ -37,7 +37,7 @@ export default {
       // 测试
       this.$HTTP.exam().then(res => {
         // this.fortune = res.data;
-        console.log(res.data)
+        console.log(res.data);
       });
     },
     /**
@@ -45,9 +45,23 @@ export default {
      * @param {*} id
      */
     deepRouter(id) {
-      let that = this;
+      let that = this,
+        name = "";
+      console.log(id)
+      switch (id) {
+        case 'rml001':
+          name = "lover_add";
+          break;
+        case 'rms001':
+          name = "lover_add";
+          break;
+        default:
+          name = "deep_report";
+          break;
+      }
+      console.log(name)
       that.$router.push({
-        name: "lover_add",
+        name: name,
         params: {
           id: id
         }

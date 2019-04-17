@@ -42,8 +42,9 @@
     margin-top: 52px;
 
     .match_item {
-      @include flex(center,$direction:column);
+      @include flex($direction:column);
       width: 284px;
+      padding-top: 100px;
 
       .match_item_un {
         @include flex(center, center);

@@ -61,10 +61,10 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
-    console.log(from)
     let name = from.name
     next(vm => {
       vm.frompath = name
+      
     })
   },
   mounted() {
@@ -153,7 +153,6 @@ export default {
      * @param {*} id 
      */
     chooseFriend(item) {
-      console.log(item)
       let that = this
       // 夫妻、恋人报告
       if (that.frompath == 'lover_add') {

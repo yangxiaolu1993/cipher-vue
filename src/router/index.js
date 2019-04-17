@@ -132,6 +132,14 @@ var router = new Router({
       }
     },
     {
+      path: '/deepReport',
+      name: 'deep_report',
+      component: resolve => require(['@/pages/deep_report/deep_report'], resolve),
+      meta: {
+        auth: true
+      }
+    },
+    {
       path: '/exam',
       name: 'exam',
       component: resolve => require(['@/pages/exam/exam'], resolve)
