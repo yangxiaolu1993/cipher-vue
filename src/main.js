@@ -4,17 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'mint-ui/lib/style.css'
-import {
-  Popup,
-  Navbar,
-  TabItem,
-  TabContainer,
-  TabContainerItem,
-  Lazyload,
-  CellSwipe,
-  DatetimePicker,
-  Picker
-} from 'mint-ui'
+import { Popup, Navbar, TabItem,TabContainer,TabContainerItem, Lazyload,CellSwipe, DatetimePicker, Picker,Swipe, SwipeItem} from 'mint-ui'
 import InterServer from './http/server'
 import Vuex from 'vuex'
 import VuexConfig from './config/vuex'
@@ -43,6 +33,8 @@ Vue.component(TabContainerItem.name, TabContainerItem);
 Vue.component(CellSwipe.name, CellSwipe);
 Vue.component(DatetimePicker.name, DatetimePicker);
 Vue.component(Picker.name, Picker);
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 Vue.use(Lazyload);
 
 new Vue({

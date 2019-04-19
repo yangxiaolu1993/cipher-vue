@@ -42,6 +42,8 @@ class HttpUrl {
 
     this.fortune_report = "/api/report/fortune_report/detail"; // 小报告详情
 
+    this.report_link = "/api/report/link"; // 关联报告
+
     this.friend_list = "/api/friends/list"; // 派友列表
 
     this.add_friend = "/api/friends/add"; //派友添加

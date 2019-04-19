@@ -63,6 +63,20 @@
 
     <!-- 关于生命密码 -->
     <div class="about">关于生命密码<img src="../../assets/img/know_more_write.png" alt=""></div>
+
+    <!-- 关联报告 -->
+    <div class="swipe">
+      <el-carousel  type="card" :height="292/ratio+'px'" :autoplay="true">
+        <el-carousel-item v-for="item in reportLink" :key="item.id">
+          <img :src="item.report_img_url" alt="">
+          <div class="link_item">
+            <div class="link_item_name">{{item.report_name}}</div>
+            <div class="link_item_desc" v-html='item.report_copywriting'></div>
+          </div>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+    
   </div>
 </template>
 

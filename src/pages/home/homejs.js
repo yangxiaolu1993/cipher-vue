@@ -46,20 +46,15 @@ export default {
      */
     deepRouter(id) {
       let that = this,
-        name = "";
-      console.log(id)
-      switch (id) {
-        case 'rml001':
-          name = "lover_add";
-          break;
-        case 'rms001':
-          name = "lover_add";
-          break;
-        default:
-          name = "deep_report";
-          break;
+          name = "",
+          regexp = new RegExp('^(rm.){1}[0-9]+$')
+
+      if(regexp.test(id)){
+        name = "lover_add";
+      }else{
+        name = "deep_report";
       }
-      console.log(name)
+      
       that.$router.push({
         name: name,
         params: {
