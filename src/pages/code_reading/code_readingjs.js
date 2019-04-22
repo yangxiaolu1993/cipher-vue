@@ -18,11 +18,6 @@ export default {
     let that = this,
     id = this.$route.params.id
     that.init(id)
-    // that.$HTTP.code_reading({
-    //   id:id
-    // }).then((res)=>{
-    //   console.log(res.data)
-    // })
   },
 
   methods: {

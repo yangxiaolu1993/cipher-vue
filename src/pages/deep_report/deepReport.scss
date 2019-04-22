@@ -1,18 +1,55 @@
-@import '../code_reading/triangle.scss';
 
+/**
+* character  fleet  
+*/
+@import '../code_reading/triangle.scss';
 .deep-report {
   width: 100%;
   min-height: 100vh;
-  background: #1C1F3D;
   padding-bottom: 50px;
+
+  &.deep-report-character{
+    background: #1C1F3D;
+  }
+
+  &.deep-report-fleet,&.deep-report-fortune,&.deep-report-business,&.deep-report-job{
+    background: #F6F8F8;;
+  }
 
   .deep-code {
     width: 100%;
     height: 641px;
-    background: url('#{$staticUrl}/deep_bg_character.png') no-repeat;
-    background-size: 100% 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    &.deep-code-character{
+      background: url('#{$staticUrl}/deep_bg_character.png') no-repeat;
+      background-size: 100% 100%;
+    }
+    &.deep-code-fleet{
+      background: url('#{$staticUrl}/deep_bg_fleet.png') no-repeat;
+      background-size: 100% 100%;
+
+      .code_item_i,.code_item_j,.code_item_k,.code_item_l,.code_item_m,.code_item_n{
+        color: #634200;
+        font-weight: bold
+      }
+      .code_item_o{
+        color: #C9301F;
+      }
+    }
+    &.deep-code-fortune,&.deep-code-business,&.deep-code-job{
+      background: url('#{$staticUrl}/deep_bg_fortune.png') no-repeat;
+      background-size: 100% 100%;
+
+      .code_item_i,.code_item_j,.code_item_k,.code_item_l,.code_item_m,.code_item_n{
+        color:#BA8C44;
+        font-weight: bold
+      }
+      .code_item_o{
+        color: #4B210B;
+      }
+    }
 
     .switchOther {
       @include position(absolute, $r: 20px, $t:24px);
@@ -32,11 +69,19 @@
     }
 
     .code_main {
-
       @include position(relative);
       width: 100%;
       height: 430px;
-      @include bg($url:'#{$cloudUrl}/mini_deep_report_sanjiao_sd.png', $pos1: center, $pos2:50px, $size:376px 385px);
+      
+      &.code_main-character{
+        @include bg($url:'#{$staticUrl}/sj_bg_1.png', $pos1: center, $pos2:50px, $size:376px 385px);
+      }
+      &.code_main-fleet{
+        @include bg($url:'#{$staticUrl}/sj_bg_2.png', $pos1: center, $pos2:50px, $size:376px 385px);
+      }
+      &.code_main-fortune,&.code_main-business,&.code_main-job{
+        @include bg($url:'#{$staticUrl}/sj_bg_3.png', $pos1: center, $pos2:50px, $size:376px 385px);
+      }
     }
 
     .code-desc {
@@ -45,122 +90,24 @@
       color: $write;
     }
   }
-
-  // 个人信息
-  .info {
-    @include flex(center, center, column);
-    width: 100%;
-    height: 224px;
-    margin-top: -100px;
-    background: url('#{$staticUrl}/deep_info_character.png') no-repeat center center;
-    background-size: 700px 224px;
-    color: #B4F2FF;
-
-    .info-name {
-      font-size: 32px;
-    }
-
-    .info-birth {
-      @include flex($align: center);
-      margin-top: 30px;
-      font-size: 30px;
-
-      img {
-        margin: 0 10px;
-        width: 43px;
-        height: 29px;
-      }
-    }
-  }
-
-  // 主要内容
-  .content {
-    width: 700px;
-    padding: 0 28px;
-    margin: 0 auto;
-    background: rgba(45, 45, 75, 0.72);
-    border-radius: 0px 0px 8px 8px;
-
-    .content-main {
-      padding-top: 28px;
-
-      p {
-        font-size: 30px;
-        color: #D4CAFF;
-        letter-spacing: 1px;
-        text-align: justify;
-        line-height: 54px;
-        margin-bottom: 24px;
-      }
-    }
-
-    .tip {
-      margin-top: 40px;
-      padding-bottom: 40px;
-      font-size: 36px;
-      font-weight: bold;
-      color: #856DFB;
-      letter-spacing: 0px;
-      text-align: center
-    }
-  }
-
+  
+  // 关于生命密码
   .about {
     @include flex(flex-end,center);
     width: 700px;
     margin: 60px auto;
     font-size: 30px;
-    color: #FFFFFF;
     
+    &.about-chracter{
+      color: #FFFFFF;
+    }
+    &.about-fleet,&.about-fortune,&.about-business,&.about-job{
+      color: #4A4A4A;
+    }
     img{
       margin-left:15px; 
       width: 27px;
       height: 26px;
     }
   }
-
-  // 关联报告
-  .swipe{
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-  }
-  .el-carousel{
-    width: 1000px;
-    left: -140px;
-  }
-  .el-carousel__mask{
-    display: none
-  }
-  .el-carousel__item img {
-    width: 542px;
-    height: 292px;
-    border-radius: 20px;
-  }
-  .el-carousel__item{
-    @include flex(center,center);
-    width: 544px;
-    height: 280px;
-    background: transparent
-  }
- 
-    .link_item{
-      width: 100%;
-      height: 292px;
-      @include flex(center,center,column);
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #fff;
-      .link_item_name{
-        font-size: 32px;
-        font-weight: bold
-      }
-      .link_item_desc{
-        margin-top: 32px;
-        font-size: 28px;
-        text-align: center
-      }
-    }
-  
 }

@@ -51,6 +51,8 @@ class HttpUrl {
     this.delete_friend = "/api/friends/delete"; //删除派友
 
     this.code_reading = '/api/user/code/reading'//密码解读
+
+    this.deep_report_detail = '/api/report/deep_report/detail'//深度报告
   }
 }
 

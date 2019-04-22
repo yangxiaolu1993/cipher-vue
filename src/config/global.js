@@ -143,7 +143,8 @@ class Global {
    * @param {*} fmt  yyyy-MM-dd
    * @param {*} date
    */
-  dateFormat(fmt, date) {
+  dateFormat(fmt, D) {
+    let date = new Date(D)
     var o = {
       "M+": date.getMonth() + 1, //月份
       "d+": date.getDate(), //日

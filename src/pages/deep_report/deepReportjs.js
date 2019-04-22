@@ -1,51 +1,66 @@
-
+import Info from './components/info/info'
+import LinkReport from './components/linkReport/linkReport'
+import Content from './components/content/content'
 export default {
   data() {
     return {
-      reportId:'',
-      sj:'',
-      ratio:'',
-      reportLink:[] //关联报告
+      deepData:'',
+      info:'', //用户信息
+      reportId:'', //报告id
+      reportName:'', //报告的英文
+      sj:'', //三角形内容
     };
   },
-
-  // components: {},
+  
+  components: {Info,LinkReport,Content},
 
   mounted() {
-    let that = this,
-    id=this.$route.params.id
-    that.reportId = id
-    that.ratio = 750/this.$store.state.WinWidth
-    this.$HTTP.code_reading({
-      id: '201904159147911'
-    }).then((res) => {
-        let data = res.data
-        that.reading = data
-        that.sj = data.life_number
-    })
-
-    this.getReportLink()
+    let that = this;
+    that.init();
+    
   },
 
   methods: {
-    // 获取关联报告
-    getReportLink(){
+    
+    init(){
       let that = this,
-      regexp = new RegExp('，')
+      id=this.$route.params.id
+      that.reportId = id
+      that.reportName = that.$GLOBAL.transReport(id,2)
+   
+      that.getDeepReportDetail()
+    },
 
-      that.$HTTP.report_link({
-        reportId:that.reportId
-      }).then((res)=>{
+    // 获取深度报告
+    getDeepReportDetail(){
+      let that = this
+      this.$HTTP.deep_report_detail({
+        report_id: that.reportId
+      }).then((res) => {
         
-        for(let item of res.data){
-          item.report_copywriting = item.report_copywriting.replace(regexp,'<br>')
-        } 
-        that.reportLink = res.data
+        let data = res.data
+          that.deepData = data
+          that.sj = data.life_number
+          // 用户信息
+          that.info = {
+            nickname:data.nickname,
+            birthday:that.sj.birthday,
+            masterCode:data.master_code,
+            fleetTime:data.fleet_time
+          }
+
+          for(let key in data.special_text_map){
+            let a = new RegExp(key,'g')
+            data.lead_languages = data.lead_languages.replace(a, '<span class="specialText-'+that.reportName+'">'+data.special_text_map[key]+'</span>')
+          }
+
+          console.log(data.lead_languages)
+          
       })
     },
-    // 获取图片路径
-    getImgUrl(name){
-      return require('../../assets/img/'+name)
-    }
+      // 获取图片路径
+      getImgUrl(name){
+        return require('../../assets/img/'+name)
+      }
   }
 };
