@@ -1,8 +1,8 @@
 <!-- 大报告 -->
 <template>
-  <div class="deep-report" :class="'deep-report-'+that.reportName">
+  <div class="deep-report" :class="'deep-report-'+reportName">
     <!-- 生命密码 -->
-    <div class="deep-code" :class="'deep-code-'+that.reportName">
+    <div class="deep-code" :class="'deep-code-'+reportName">
       <div class="switchOther">
         <img src="../../assets/img/change_person.png" alt>切换他人
       </div>
@@ -46,7 +46,7 @@
     <Content :reportid="reportId" :content="deepData.lead_languages"></Content>
 
     <!-- 关于生命密码 -->
-    <div class="about" :class="'about-'+that.reportName">关于生命密码<img :src="reportId==10?getImgUrl('know_more_write.png'):getImgUrl('know_more_home.png')" alt=""></div>
+    <div class="about" :class="'about-'+reportName">关于生命密码<img :src="reportId==10?getImgUrl('know_more_write.png'):getImgUrl('know_more_home.png')" alt=""></div>
 
     <!-- 关联报告 -->
     <LinkReport :reportid="reportId"></LinkReport>

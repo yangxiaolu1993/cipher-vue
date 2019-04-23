@@ -53,9 +53,6 @@ export default {
             let a = new RegExp(key,'g')
             data.lead_languages = data.lead_languages.replace(a, '<span class="specialText-'+that.reportName+'">'+data.special_text_map[key]+'</span>')
           }
-
-          console.log(data.lead_languages)
-          
       })
     },
       // 获取图片路径

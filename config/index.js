@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const hostIp = require('../src/config/domain')
 
 module.exports = {
   dev: {
@@ -20,15 +21,11 @@ module.exports = {
       },
       '/mock': {
         target: "http://localhost:8080",
-        // target: "http://192.168.2.122:8080",
-        // target: "http://192.168.99.160:8080",
         changeOrigin: false,
         pathRewrite: {'^/mock': ''}
       },
       '/api': {
-        target: "http://localhost:3000",
-        // target: "http://192.168.2.122:8080",
-        // target: "http://192.168.99.160:8080",
+        target: hostIp,
         changeOrigin: false,
         pathRewrite: {'^/api': ''}
       }
@@ -36,8 +33,6 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    // host: '192.168.2.122',
-    // host:'192.168.99.160',
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
