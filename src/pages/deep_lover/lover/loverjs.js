@@ -32,7 +32,7 @@ export default {
     }
     //从派友列表进入
     if (options.module == 'friend') {
-      that.info[options.index] = options.info
+      that.info[options.index] = Object.assign({},options.info,)
       that.$forceUpdate();
     }
   },
