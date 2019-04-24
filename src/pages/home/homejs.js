@@ -37,7 +37,7 @@ export default {
       // 测试
       this.$HTTP.exam().then(res => {
         // this.fortune = res.data;
-        console.log(res.data);
+        // console.log(res.data);
       });
     },
     /**
@@ -62,5 +62,6 @@ export default {
         }
       });
     }
+    
   }
 };

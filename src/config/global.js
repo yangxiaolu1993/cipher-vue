@@ -144,7 +144,7 @@ class Global {
    * @param {*} date
    */
   dateFormat(fmt, D) {
-    let date = new Date(D)
+    let date = new Date(D);
     var o = {
       "M+": date.getMonth() + 1, //月份
       "d+": date.getDate(), //日
@@ -209,7 +209,17 @@ class Global {
       }
     }
 
-    return result
+    return result;
+  }
+
+  /**
+   * 数据类型
+   * 返回值为string类型
+   */
+  judgeDataType(obj) {
+    let judge = Object.prototype.toString.call(obj);
+    let type = judge.match(/\s(.)*(\])/g)[0].replace(/\]/, "");
+    return type;
   }
 }
 
