@@ -13,7 +13,7 @@ import 'amfe-flexible'
 import title from './config/directive'
 
 // 数据模拟
-// require('./mock')
+require('./mock')
 
 // 服务器请求路径设置
 Vue.prototype.$HTTP = InterServer
